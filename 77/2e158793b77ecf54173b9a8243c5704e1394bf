@@ -1,0 +1,44 @@
+.gitignore
+  h_15f0de19236f1a 1-41
+README.md
+  h_15f0de19236f1a 1-36
+app/globals.css
+  h_15f0de19236f1a 1-42
+app/layout.tsx
+  h_15f0de19236f1a 1-32
+app/page.module.css
+  h_15f0de19236f1a 1-167
+app/page.tsx
+  h_15f0de19236f1a 1-95
+eslint.config.mjs
+  h_15f0de19236f1a 1-25
+next.config.ts
+  h_15f0de19236f1a 1-7
+package-lock.json
+  h_15f0de19236f1a 1-5574
+package.json
+  h_15f0de19236f1a 1-25
+public/file.svg
+  h_15f0de19236f1a 1
+public/globe.svg
+  h_15f0de19236f1a 1
+public/next.svg
+  h_15f0de19236f1a 1
+public/vercel.svg
+  h_15f0de19236f1a 1
+public/window.svg
+  h_15f0de19236f1a 1
+tsconfig.json
+  h_15f0de19236f1a 1-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "772e158793b77ecf54173b9a8243c5704e1394bf",
+  "prompts": {},
+  "humans": {
+    "h_15f0de19236f1a": {
+      "author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    }
+  }
+}
