@@ -1,0 +1,156 @@
+.game {
+  max-width: 40rem;
+  padding: 1.2rem 1.2rem 1.3rem;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(120, 170, 255, 0.1), transparent 34%),
+    var(--card);
+}
+
+.pending {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hud p,
+.result p,
+.ask {
+  margin: 0;
+}
+
+.hud p {
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ask {
+  margin-top: 0.85rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+.staff {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.85rem;
+  padding: 0.2rem 0.4rem 0;
+  border-radius: 22px;
+  background: #f7f1e8;
+  color: #1a1028;
+}
+
+.staff line {
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+
+.staff .ledger {
+  stroke-width: 1.6;
+}
+
+.staff .stem {
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+
+.staff .head {
+  fill: currentColor;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.options button {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 0.95rem 0.6rem;
+  background: var(--chip);
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  cursor: pointer;
+}
+
+.options button:disabled {
+  cursor: default;
+}
+
+.options button[data-state="correct"] {
+  border-color: var(--good);
+  background: color-mix(in srgb, var(--good) 22%, transparent);
+}
+
+.options button[data-state="wrong"] {
+  border-color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 18%, transparent);
+}
+
+.options button[data-state="dim"] {
+  opacity: 0.45;
+}
+
+.feedback {
+  min-height: 1.5rem;
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.next {
+  margin-top: 0.9rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  background: var(--orange);
+  color: #1a0d00;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.result p {
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.result strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: -0.04em;
+}
+
+.result span {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  .next {
+    width: 100%;
+  }
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import { IBM_Plex_Mono, Outfit } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader/SiteHeader";
@@ -78,6 +79,7 @@ export default function RootLayout({
           </main>
           <SiteFooter />
         </ProgressProvider>
+        <Analytics />
       </body>
     </html>
   );

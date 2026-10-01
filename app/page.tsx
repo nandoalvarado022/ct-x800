@@ -47,6 +47,11 @@ export default function HomePage() {
           <strong>Aprendizaje</strong>
           <p>{lessons.length} prácticas con XP: Step Up, banco de 160 y canciones MIDI.</p>
         </Link>
+        <Link className={styles.games} href="/juegos">
+          <span>Módulo</span>
+          <strong>Juegos</strong>
+          <p>Un mini juego para ubicar Do, Re, Mi y el resto de la escala en el pentagrama.</p>
+        </Link>
       </section>
       <section className={styles.split}>
         <div>

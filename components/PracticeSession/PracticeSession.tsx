@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { useProgress } from "@/components/ProgressProvider/ProgressProvider";
 import type { PracticeExercise, PracticeKey } from "@/lib/types";
 import styles from "./PracticeSession.module.scss";
@@ -43,13 +43,19 @@ export function PracticeSession({
   const [cheer, setCheer] = useState<string | null>(null);
   const [finished, setFinished] = useState(false);
   const [earned, setEarned] = useState(false);
+  const busy = useRef(false);
 
   const total = exercise.steps.length;
   const step = exercise.steps[index];
   const progress = finished ? 1 : index / total;
 
+  useEffect(() => {
+    busy.current = false;
+  }, [index, finished]);
+
   function advance() {
-    if (!step) return;
+    if (busy.current || !step || finished) return;
+    busy.current = true;
     setCheer(step.cheer);
     if (index + 1 >= total) {
       const firstTime = !isPracticeComplete(exercise.slug);
@@ -62,11 +68,13 @@ export function PracticeSession({
   }
 
   function back() {
+    busy.current = false;
     setCheer(null);
     setIndex((current) => Math.max(0, current - 1));
   }
 
   function replay() {
+    busy.current = false;
     setIndex(0);
     setCheer(null);
     setFinished(false);
@@ -102,8 +110,7 @@ export function PracticeSession({
         {cheer ? <p>{index > 0 || finished ? `Racha ${finished ? total : index} · ${cheer}` : cheer}</p> : null}
       </div>
 
-      <AnimatePresence mode="wait">
-        {finished ? (
+      {finished ? (
           <motion.div
             key="done"
             className={styles.clear}
@@ -148,13 +155,12 @@ export function PracticeSession({
               </button>
             </div>
           </motion.div>
-        ) : (
+        ) : step ? (
           <motion.article
             key={step.id}
             className={styles.card}
             initial={reduce ? false : { opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={reduce ? undefined : { opacity: 0, y: -8 }}
             transition={{ duration: 0.22 }}
           >
             <p className={styles.stepLabel}>
@@ -178,8 +184,7 @@ export function PracticeSession({
               ) : null}
             </div>
           </motion.article>
-        )}
-      </AnimatePresence>
+        ) : null}
     </section>
   );
 }

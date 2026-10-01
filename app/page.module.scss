@@ -1,6 +1,6 @@
 .portals {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 0.9rem;
 }
 
@@ -30,6 +30,10 @@
 
 .portals a.learn {
   background: var(--portal-learn);
+}
+
+.portals a.games {
+  background: var(--portal-games);
 }
 
 .portals span,
