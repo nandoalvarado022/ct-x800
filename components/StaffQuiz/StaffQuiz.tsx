@@ -95,7 +95,7 @@ export function StaffQuiz() {
   function choose(id: string) {
     if (picked) return;
     setPicked(id);
-    if (id === question.note.id) {
+    if (id === question?.note.id) {
       setScore((current) => current + 1);
     }
   }
@@ -106,7 +106,7 @@ export function StaffQuiz() {
       return;
     }
     setIndex((current) => current + 1);
-    setQuestion(makeQuestion(question.note.id));
+    setQuestion(makeQuestion(question?.note.id));
     setPicked(null);
   }
 
