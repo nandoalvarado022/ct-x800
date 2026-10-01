@@ -1,0 +1,85 @@
+app/aprender/page.tsx
+  s_7048143706d9c8::t_ac69f57c2ab548 25
+components/ProgressProvider/ProgressProvider.tsx
+  s_7048143706d9c8::t_2366ff9575377f 65-75,77,81-86,96-97,99
+  s_7048143706d9c8::t_9d8038bb88c47e 30,32
+  s_7048143706d9c8::t_649d1ac6bdae1b 46,50-51
+  s_7048143706d9c8::t_14207d4a686d17 11,15,24-25
+components/PracticeBoard/PracticeBoard.module.scss
+  s_7048143706d9c8::t_2f831e2a7dc1d8 1-53,58-181,192-200
+  s_7048143706d9c8::t_e5428715da5fd1 54-57
+  s_7048143706d9c8::t_a155e1da09d4ef 182-191
+app/practica/page.tsx
+  s_7048143706d9c8::t_7822db47f06b07 1-32
+app/practica/[slug]/page.tsx
+  s_7048143706d9c8::t_f024540851803b 39,44
+  s_7048143706d9c8::t_320ae12db433e3 1-38,40-43,45-48
+components/SiteHeader/SiteHeader.tsx
+  s_7048143706d9c8::t_f8282c975863b4 10
+components/HomeHero/HomeHero.tsx
+  s_7048143706d9c8::t_642c6f0bfa49ff 48-49
+app/page.tsx
+  s_7048143706d9c8::t_f5bcc3dea59802 4
+  s_7048143706d9c8::t_9bb55927057e8c 11
+  s_7048143706d9c8::t_a2515b8980d042 33,38-45
+ads.txt
+  h_15f0de19236f1a 1
+components/PracticeSession/PracticeSession.module.scss
+  s_7048143706d9c8::t_f49252e44bffa4 1-237
+lib/content.ts
+  s_7048143706d9c8::t_a3b1f8a598a543 116-129
+  s_7048143706d9c8::t_0e15d2a6045e3e 3-11
+  s_7048143706d9c8::t_23586a5e910ace 48-95,98
+app/globals.module.scss
+  s_7048143706d9c8::t_74b02b9106deed 29
+  s_7048143706d9c8::t_c683b60fed819e 100
+components/SiteFooter/SiteFooter.tsx
+  s_7048143706d9c8::t_e7aab863afe63e 14
+components/PracticeBoard/PracticeBoard.tsx
+  s_7048143706d9c8::t_fc9d370a680ed9 104-109
+  s_7048143706d9c8::t_11ac77482ed4c6 18
+  s_7048143706d9c8::t_cfb878bc480bc7 1-17,19-103,110-112
+app/sitemap.ts
+  s_7048143706d9c8::t_072958f4b84eb3 12,15-18
+  s_7048143706d9c8::t_95f625f0dee9a5 2
+app/page.module.scss
+  s_7048143706d9c8::t_e959eaea8aa2f4 3
+  s_7048143706d9c8::t_54236abea55a72 23,27,31
+  s_7048143706d9c8::t_57967594e877c0 125-130
+  s_7048143706d9c8::t_e140894427fda0 28-30
+data/practice.json
+  s_7048143706d9c8::t_4947b0bd98d29a 1-139
+lib/types.ts
+  s_7048143706d9c8::t_334594455f097b 25-50
+components/PracticeSession/PracticeSession.tsx
+  s_7048143706d9c8::t_2815bae036f342 1-32,34-36,38-83,85-185
+  s_7048143706d9c8::t_27c504b2be7abb 33,37
+  s_7048143706d9c8::t_7de0a15ee57bf6 84
+lib/site.ts
+  s_7048143706d9c8::t_a8cdb400d2dd5c 4
+package-lock.json
+  h_15f0de19236f1a 12,2029-2066
+package.json
+  h_15f0de19236f1a 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d4720c16f48024ee28bab09170ff2a1ac980d01e",
+  "prompts": {},
+  "humans": {
+    "h_15f0de19236f1a": {
+      "author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_7048143706d9c8": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "3bfeead9-6dde-4f5c-8274-a910b809218d",
+        "model": "grok-4.7"
+      },
+      "human_author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    }
+  }
+}
