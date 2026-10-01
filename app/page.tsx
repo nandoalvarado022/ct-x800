@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { HomeHero } from "@/components/HomeHero/HomeHero";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
-import { getDocumentation, getLearning } from "@/lib/content";
+import { getDocumentation, getLearning, getPractice } from "@/lib/content";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 import styles from "./page.module.scss";
 
 export default function HomePage() {
   const docs = getDocumentation();
   const lessons = getLearning();
+  const warmups = getPractice();
 
   return (
     <>
@@ -29,12 +30,19 @@ export default function HomePage() {
       />
       <HomeHero />
       <section className={styles.portals} aria-label="Módulos">
-        <Link href="/documentacion">
+        <Link className={styles.doc} href="/documentacion">
           <span>Módulo</span>
           <strong>Documentación</strong>
           <p>{docs.length} fichas de configuración: pedal, split, USB-MIDI, efectos y alimentación.</p>
         </Link>
-        <Link href="/aprender">
+        <Link className={styles.practice} href="/practica">
+          <span>Módulo</span>
+          <strong>Práctica</strong>
+          <p>
+            {warmups.length} calentamientos cortos, con pasos y XP, antes de abrir una canción.
+          </p>
+        </Link>
+        <Link className={styles.learn} href="/aprender">
           <span>Módulo</span>
           <strong>Aprendizaje</strong>
           <p>{lessons.length} prácticas con XP: Step Up, banco de 160 y canciones MIDI.</p>

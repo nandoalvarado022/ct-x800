@@ -11,6 +11,7 @@ export function SiteFooter() {
         </p>
         <nav aria-label="Pie">
           <Link href="/documentacion">Documentación</Link>
+          <Link href="/practica">Práctica</Link>
           <Link href="/aprender">Aprender</Link>
           <Link href="/experto">Pregúntale al experto</Link>
         </nav>

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getDocumentation, getLearning } from "@/lib/content";
+import { getDocumentation, getLearning, getPractice } from "@/lib/content";
 import { getSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -9,8 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
     { path: "", priority: 1 },
     { path: "/documentacion", priority: 0.9 },
+    { path: "/practica", priority: 0.9 },
     { path: "/aprender", priority: 0.9 },
     { path: "/experto", priority: 0.7 },
+    ...getPractice().map((item) => ({
+      path: `/practica/${item.slug}`,
+      priority: 0.8,
+    })),
     ...getDocumentation().map((item) => ({
       path: `/documentacion/${item.slug}`,
       priority: 0.8,

@@ -45,8 +45,8 @@ export function HomeHero() {
           <Link className={styles.primary} href="/documentacion">
             Abrir documentación
           </Link>
-          <Link className={styles.secondary} href="/aprender">
-            Empezar a practicar
+          <Link className={styles.secondary} href="/practica">
+            Calentar las manos
           </Link>
         </div>
       </div>

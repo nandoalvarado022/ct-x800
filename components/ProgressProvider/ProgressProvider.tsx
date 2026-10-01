@@ -8,10 +8,11 @@ import {
   useMemo,
   useState,
 } from "react";
-import { learning } from "@/lib/content";
+import { learning, practice } from "@/lib/content";
 import { rankForXp, xpForDifficulty } from "@/lib/progress";
 
 const STORAGE_KEY = "ctx800-mastery";
+const PRACTICE_KEY = "ctx800-practice";
 
 type ProgressValue = {
   ready: boolean;
@@ -20,14 +21,15 @@ type ProgressValue = {
   rank: ReturnType<typeof rankForXp>;
   isComplete: (slug: string) => boolean;
   toggle: (slug: string) => void;
+  isPracticeComplete: (slug: string) => boolean;
+  completePractice: (slug: string) => void;
 };
 
 const ProgressContext = createContext<ProgressValue | null>(null);
 
-function readCompleted() {
-  const known = new Set(learning.map((item) => item.slug));
+function readSlugs(storageKey: string, known: Set<string>) {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(storageKey);
     if (!raw) return [];
     const parsed = JSON.parse(raw) as unknown;
     if (!Array.isArray(parsed)) return [];
@@ -41,10 +43,12 @@ function readCompleted() {
 
 export function ProgressProvider({ children }: { children: React.ReactNode }) {
   const [completed, setCompleted] = useState<string[]>([]);
+  const [practiceDone, setPracticeDone] = useState<string[]>([]);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setCompleted(readCompleted());
+    setCompleted(readSlugs(STORAGE_KEY, new Set(learning.map((item) => item.slug))));
+    setPracticeDone(readSlugs(PRACTICE_KEY, new Set(practice.map((item) => item.slug))));
     setReady(true);
   }, []);
 
@@ -58,12 +62,28 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
     });
   }, []);
 
+  const completePractice = useCallback((slug: string) => {
+    setPracticeDone((current) => {
+      if (current.includes(slug) || !practice.some((item) => item.slug === slug)) {
+        return current;
+      }
+      const next = [...current, slug];
+      localStorage.setItem(PRACTICE_KEY, JSON.stringify(next));
+      return next;
+    });
+  }, []);
+
   const xp = useMemo(() => {
-    return learning.reduce((total, item) => {
+    const fromLessons = learning.reduce((total, item) => {
       if (!completed.includes(item.slug)) return total;
       return total + xpForDifficulty(item.difficulty);
     }, 0);
-  }, [completed]);
+    const fromPractice = practice.reduce((total, item) => {
+      if (!practiceDone.includes(item.slug)) return total;
+      return total + item.xp;
+    }, 0);
+    return fromLessons + fromPractice;
+  }, [completed, practiceDone]);
 
   const value = useMemo<ProgressValue>(
     () => ({
@@ -73,8 +93,10 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
       rank: rankForXp(xp),
       isComplete: (slug) => completed.includes(slug),
       toggle,
+      isPracticeComplete: (slug) => practiceDone.includes(slug),
+      completePractice,
     }),
-    [completed, ready, toggle, xp],
+    [completed, completePractice, practiceDone, ready, toggle, xp],
   );
 
   return (

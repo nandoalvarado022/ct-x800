@@ -1,6 +1,14 @@
 import documentationJson from "@/data/documentation.json";
 import learningJson from "@/data/learning.json";
-import { DIFFICULTIES, type ContentItem, type DocumentationItem, type LearningItem } from "@/lib/types";
+import practiceJson from "@/data/practice.json";
+import {
+  DIFFICULTIES,
+  type ContentItem,
+  type DocumentationItem,
+  type LearningItem,
+  type PracticeExercise,
+  type PracticeKey,
+} from "@/lib/types";
 
 function assertUniqueSlugs(items: ContentItem[]) {
   const seen = new Set<string>();
@@ -37,8 +45,57 @@ function asLearning(value: unknown): LearningItem[] {
   return items;
 }
 
+function asKey(value: PracticeKey, stepId: string) {
+  if (!value || typeof value.note !== "string" || !value.note || typeof value.finger !== "string" || !value.finger) {
+    throw new Error(`Tecla inválida en el paso ${stepId}`);
+  }
+}
+
+function asPractice(value: unknown): PracticeExercise[] {
+  if (!Array.isArray(value)) {
+    throw new Error("practice.json debe ser una lista");
+  }
+
+  const items = value as PracticeExercise[];
+  const seen = new Set<string>();
+
+  for (const item of items) {
+    if (!item.id || !item.slug || !item.title || !item.description || !item.intro) {
+      throw new Error(`Ejercicio incompleto: ${item.id || item.slug || "sin id"}`);
+    }
+    if (!Number.isFinite(item.minutes) || item.minutes <= 0) {
+      throw new Error(`El ejercicio ${item.id} necesita una duración`);
+    }
+    if (!Number.isFinite(item.xp) || item.xp <= 0) {
+      throw new Error(`El ejercicio ${item.id} necesita XP`);
+    }
+    if (!Array.isArray(item.steps) || item.steps.length === 0) {
+      throw new Error(`El ejercicio ${item.id} no tiene pasos`);
+    }
+    if (seen.has(item.slug)) {
+      throw new Error(`Slug duplicado: ${item.slug}`);
+    }
+    seen.add(item.slug);
+
+    const stepIds = new Set<string>();
+    for (const step of item.steps) {
+      if (!step.id || !step.title || !step.say || !step.tip || !step.cheer || !step.action) {
+        throw new Error(`Paso incompleto en ${item.id}`);
+      }
+      if (stepIds.has(step.id)) {
+        throw new Error(`Paso duplicado ${step.id} en ${item.id}`);
+      }
+      stepIds.add(step.id);
+      step.keys?.forEach((key) => asKey(key, step.id));
+    }
+  }
+
+  return items;
+}
+
 export const documentation = asDocumentation(documentationJson);
 export const learning = asLearning(learningJson);
+export const practice = asPractice(practiceJson);
 
 export function getDocumentation() {
   return documentation;
@@ -54,6 +111,20 @@ export function getDocumentationBySlug(slug: string) {
 
 export function getLearningBySlug(slug: string) {
   return learning.find((item) => item.slug === slug);
+}
+
+export function getPractice() {
+  return practice;
+}
+
+export function getPracticeBySlug(slug: string) {
+  return practice.find((item) => item.slug === slug);
+}
+
+export function getNextPractice(slug: string) {
+  const index = practice.findIndex((item) => item.slug === slug);
+  if (index < 0) return undefined;
+  return practice[index + 1];
 }
 
 export function getRelated(item: ContentItem, limit = 3) {

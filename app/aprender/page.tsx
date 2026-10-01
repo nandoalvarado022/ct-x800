@@ -22,7 +22,7 @@ export default function AprenderPage() {
   return (
     <>
       <PageIntro
-        kicker="Práctica"
+        kicker="Aprendizaje"
         title="Aprende con el teclado"
         lede="Una ruta corta: primero las lecciones del banco, después una frase propia y al final la carga de canciones MIDI. Cada práctica suma XP."
       />

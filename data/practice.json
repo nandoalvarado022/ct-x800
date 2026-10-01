@@ -1,0 +1,139 @@
+[
+  {
+    "id": "practice-manos-01",
+    "slug": "despierta-las-manos",
+    "title": "Despierta las manos",
+    "description": "Siéntate en el centro, suelta los hombros y apoya cinco dedos. Todavía no hace falta una canción.",
+    "minutes": 2,
+    "xp": 20,
+    "intro": "Esto es el saludo, no la pieza. Si el cuerpo queda cómodo, lo que toques después sale más fácil.",
+    "steps": [
+      {
+        "id": "centro",
+        "title": "Siéntate en el centro",
+        "say": "Busca el Do que queda justo delante de tu ombligo. Acerca el asiento hasta que los codos queden un poco por delante del cuerpo, sueltos.",
+        "tip": "Los dos pies tocan el suelo. Si los hombros se van hacia las orejas, bájalos antes de seguir.",
+        "cheer": "Ese es tu sitio. Desde aquí se toca más fácil.",
+        "action": "Ya estoy en el centro"
+      },
+      {
+        "id": "suelta",
+        "title": "Sacude y suelta",
+        "say": "Deja caer las manos a los lados y sacúdelas, como si secaras agua. Tres veces. Luego déjalas un segundo en el regazo.",
+        "tip": "Las muñecas blandas importan más que la velocidad. Si están duras, repite la sacudida.",
+        "cheer": "Manos livianas. Se quedan así.",
+        "action": "Ya las sacudí"
+      },
+      {
+        "id": "derecha",
+        "title": "Aterriza la derecha",
+        "say": "Pulgar en Do. Los otros dedos, en orden, sobre Re, Mi, Fa y Sol. No hundas las teclas: solo el peso de la mano, como si el teclado fuera una mesa tibia.",
+        "tip": "Un dedo por tecla. El codo sigue cerca del cuerpo, sin abrir el ala.",
+        "cheer": "Cinco dedos, cinco teclas. Ya tienen mapa.",
+        "action": "La derecha ya aterrizó",
+        "keys": [
+          { "note": "Do", "finger": "1" },
+          { "note": "Re", "finger": "2" },
+          { "note": "Mi", "finger": "3" },
+          { "note": "Fa", "finger": "4" },
+          { "note": "Sol", "finger": "5" }
+        ]
+      },
+      {
+        "id": "saludo",
+        "title": "Saluda con cada dedo",
+        "say": "Sin cambiar de tecla, levanta y baja un dedo a la vez: pulgar, índice, medio, anular y meñique. Los demás se quedan quietos.",
+        "tip": "Si un dedo se lleva al vecino, quédate solo con ese. Una pasada lenta alcanza.",
+        "cheer": "Cada dedo ya sabe cuál es su tecla.",
+        "action": "Los cinco saludaron"
+      },
+      {
+        "id": "izquierda",
+        "title": "Ahora la izquierda",
+        "say": "Baja una octava. El meñique va en Do y, hacia la derecha, Re, Mi, Fa y Sol con el pulgar. Apoya, y otra vez levanta un dedo a la vez.",
+        "tip": "La izquierda se siente rara al principio. Es la primera vez: una pasada basta.",
+        "cheer": "Las dos manos ya despertaron.",
+        "action": "La izquierda también",
+        "keys": [
+          { "note": "Do", "finger": "5" },
+          { "note": "Re", "finger": "4" },
+          { "note": "Mi", "finger": "3" },
+          { "note": "Fa", "finger": "2" },
+          { "note": "Sol", "finger": "1" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "practice-camino-01",
+    "slug": "caminito-de-do",
+    "title": "El caminito de Do",
+    "description": "Cinco notas de ida y de vuelta, bien lentas. El primer sonido del día, sin canción y sin prisa.",
+    "minutes": 3,
+    "xp": 30,
+    "intro": "Una vuelta limpia vale por varias rápidas. Di “uno” en voz alta cada vez que suene una nota.",
+    "steps": [
+      {
+        "id": "piano",
+        "title": "Un piano y un uno",
+        "say": "Elige un tono de piano. Di “uno” en voz alta, tranquilo. Ese uno es el pulso de hoy: cada nota va a caer encima.",
+        "tip": "Si prefieres el metrónomo del CT-X800, déjalo cerca de 60. La voz también sirve.",
+        "cheer": "Ya tienes pulso. Las notas caminan sobre ese uno.",
+        "action": "Ya tengo el uno"
+      },
+      {
+        "id": "sube",
+        "title": "Sube con la derecha",
+        "say": "Pulgar en Do. Toca Do, Re, Mi, Fa, Sol. Una nota por cada uno. Suelta la tecla antes de tocar la siguiente.",
+        "tip": "Si suenan dos teclas a la vez, el dedo iba acostado. Levántalo un poco y empieza de nuevo en Do.",
+        "cheer": "Subiste la escalera. Cinco peldaños.",
+        "action": "Ya subí hasta Sol",
+        "keys": [
+          { "note": "Do", "finger": "1" },
+          { "note": "Re", "finger": "2" },
+          { "note": "Mi", "finger": "3" },
+          { "note": "Fa", "finger": "4" },
+          { "note": "Sol", "finger": "5" }
+        ]
+      },
+      {
+        "id": "baja",
+        "title": "Baja por el mismo camino",
+        "say": "Desde Sol, vuelve: Sol, Fa, Mi, Re, Do. El meñique empieza y el pulgar cierra en Do. Mismo uno, misma calma.",
+        "tip": "El Do final puede durar un poquito más. Es el punto y aparte.",
+        "cheer": "Ida y vuelta. Eso ya es una frase.",
+        "action": "Ya volví a Do",
+        "keys": [
+          { "note": "Sol", "finger": "5" },
+          { "note": "Fa", "finger": "4" },
+          { "note": "Mi", "finger": "3" },
+          { "note": "Re", "finger": "2" },
+          { "note": "Do", "finger": "1" }
+        ]
+      },
+      {
+        "id": "izquierda",
+        "title": "La izquierda copia el camino",
+        "say": "Meñique en el Do de abajo. Sube Do, Re, Mi, Fa, Sol y baja otra vez. El pulgar es el que llega a Sol.",
+        "tip": "Más lento que la derecha. Si un dedo se traba, para y saluda solo con ese dedo.",
+        "cheer": "La izquierda ya conoce el camino.",
+        "action": "La izquierda hizo la vuelta",
+        "keys": [
+          { "note": "Do", "finger": "5" },
+          { "note": "Re", "finger": "4" },
+          { "note": "Mi", "finger": "3" },
+          { "note": "Fa", "finger": "2" },
+          { "note": "Sol", "finger": "1" }
+        ]
+      },
+      {
+        "id": "suave",
+        "title": "Una vuelta más suave",
+        "say": "Elige una mano, la que quieras. Repite el camino entero más suave, como si las teclas estuvieran tibias. Una sola vuelta.",
+        "tip": "Si sale pesado, no lo repitas diez veces. Mañana esta misma vuelta va a estar más fácil.",
+        "cheer": "Ronda hecha. Ya puedes abrir una canción.",
+        "action": "La vuelta suave salió"
+      }
+    ]
+  }
+]

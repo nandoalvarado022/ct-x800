@@ -7,6 +7,7 @@ import styles from "./SiteHeader.module.scss";
 
 const links = [
   { href: "/documentacion", label: "Documentación" },
+  { href: "/practica", label: "Práctica" },
   { href: "/aprender", label: "Aprender" },
   { href: "/experto", label: "Experto" },
 ];

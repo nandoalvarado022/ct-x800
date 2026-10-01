@@ -1,0 +1,200 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(142, 240, 196, 0.14), transparent 42%),
+    linear-gradient(160deg, rgba(248, 125, 5, 0.16), transparent 55%),
+    var(--card);
+}
+
+.mood {
+  margin: 0;
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.line {
+  margin: 0.45rem 0 0;
+  max-width: 38rem;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+  line-height: 1.35;
+}
+
+.meta {
+  margin: 0.55rem 0 0;
+  color: var(--faint);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.ring {
+  --p: 0;
+  width: 5.4rem;
+  height: 5.4rem;
+  flex: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(
+    var(--orange) calc(var(--p) * 1%),
+    var(--meter) calc(var(--p) * 1%)
+  );
+}
+
+.ring span {
+  width: 3.85rem;
+  height: 3.85rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.95rem;
+}
+
+.path {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.station,
+.current,
+.done {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.95rem;
+  min-height: 9.5rem;
+  padding: 1rem 1.05rem 1.05rem;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  text-decoration: none;
+}
+
+.current {
+  border-color: rgba(248, 125, 5, 0.65);
+  background:
+    linear-gradient(160deg, rgba(248, 125, 5, 0.16), transparent 58%),
+    var(--card);
+}
+
+.done {
+  border-color: rgba(142, 240, 196, 0.45);
+}
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.badge {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--chip);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.85rem;
+}
+
+.current .badge {
+  background: var(--orange);
+  color: #1a0d00;
+}
+
+.done .badge {
+  background: rgba(142, 240, 196, 0.2);
+  color: var(--good);
+}
+
+.connector {
+  width: 2px;
+  flex: 1;
+  min-height: 1.5rem;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.statusRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.7rem;
+  color: var(--faint);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.status {
+  color: var(--orange-2);
+}
+
+.done .status {
+  color: var(--good);
+}
+
+.copy strong {
+  font-size: 1.45rem;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.go {
+  margin-top: 0.35rem;
+  font-weight: 700;
+}
+
+.play {
+  align-self: flex-start;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.05rem;
+  background: var(--orange);
+  color: #1a0d00;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .hud {
+    align-items: flex-start;
+  }
+
+  .line {
+    font-size: 1.05rem;
+  }
+}

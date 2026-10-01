@@ -1,6 +1,6 @@
 .portals {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.9rem;
 }
 
@@ -20,11 +20,15 @@
   background: var(--card);
 }
 
-.portals a:first-child {
+.portals a.doc {
   background: var(--portal-doc);
 }
 
-.portals a:last-child {
+.portals a.practice {
+  background: var(--portal-practice);
+}
+
+.portals a.learn {
   background: var(--portal-learn);
 }
 
@@ -118,8 +122,13 @@
   font-weight: 700;
 }
 
+@media (max-width: 960px) {
+  .portals {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 800px) {
-  .portals,
   .split {
     grid-template-columns: 1fr;
   }
