@@ -1,0 +1,14 @@
+components/StaffQuiz/StaffQuiz.tsx
+  h_15f0de19236f1a 98,109
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "82b4ac268b6d5a0455dd0eb3a7a9cd4ed8af1457",
+  "prompts": {},
+  "humans": {
+    "h_15f0de19236f1a": {
+      "author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    }
+  }
+}
