@@ -1,0 +1,86 @@
+components/SiteFooter/SiteFooter.tsx
+  s_7a20854ee1150d::t_67cb4e172b5c8c 16
+app/juegos/page.tsx
+  s_7a20854ee1150d::t_ddca18ea74fa05 1-28
+app/sitemap.ts
+  s_7a20854ee1150d::t_2a1d6f5176ca4c 14
+app/page.tsx
+  s_7a20854ee1150d::t_591e8c0fc46662 50-54
+lib/staff-quiz.ts
+  s_7a20854ee1150d::t_1d787e6205a839 1-51
+app/globals.module.scss
+  s_7a20854ee1150d::t_03fc474f635350 31
+  s_7a20854ee1150d::t_7614bec6e58f1f 103
+components/PracticeSession/PracticeSession.module.scss
+  s_7048143706d9c8::t_9b80f983cdcb25 120,126-127
+components/PracticeSession/PracticeSession.tsx
+  s_7048143706d9c8::t_a2cac2396ff4f9 158
+  s_7048143706d9c8::t_c76a09095d3f6b 5
+  s_7048143706d9c8::t_562c4f6df8a7f0 46,57-58
+  s_7048143706d9c8::t_dc0f11675eb2b5 71,77
+  s_7048143706d9c8::t_424323ed40b057 52-55
+  s_7048143706d9c8::t_bb9b8549c25094 113
+  s_7048143706d9c8::t_0b35f6573df136 187
+  s_7048143706d9c8::t_77e8cee66ee1ab 4
+app/page.module.scss
+  s_7a20854ee1150d::t_8a1d6f08b135af 35-38
+  s_7a20854ee1150d::t_af8b45d3721d0d 3
+components/SiteHeader/SiteHeader.tsx
+  s_7a20854ee1150d::t_36aaeaa5d8d208 12
+app/layout.tsx
+  s_840dbfb287e1d5::t_457850d9c0b64d 3
+  s_840dbfb287e1d5::t_78b13a43e827cf 82
+components/StaffQuiz/StaffQuiz.module.scss
+  s_7a20854ee1150d::t_d61b57dfe021f4 59-61,63,65-66
+  s_7a20854ee1150d::t_6d2c41448d21c4 1-57,68-156
+  s_7a20854ee1150d::t_9653fd5504cb43 58,62,64,67
+components/StaffQuiz/StaffQuiz.tsx
+  h_15f0de19236f1a 14
+  s_7a20854ee1150d::t_bd3f39378f76b8 3
+  s_7a20854ee1150d::t_a0dfe28a9f58bc 1-2,4-9,15-35,37,44-54,59-69,71-159
+  s_7a20854ee1150d::t_71ca401d132321 10-13
+  s_7a20854ee1150d::t_1348aaecab979a 36,38
+  s_7a20854ee1150d::t_cf71c3cd0bdc85 39-43
+  s_7a20854ee1150d::t_ad83c367628868 55-58,70
+package-lock.json
+  s_840dbfb287e1d5::t_eca2af3a612a9a 12,2030-2071
+package.json
+  h_15f0de19236f1a 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "16f6789d3eaedfd225358520fd6fa22ffef21aa8",
+  "prompts": {},
+  "humans": {
+    "h_15f0de19236f1a": {
+      "author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_7048143706d9c8": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "3bfeead9-6dde-4f5c-8274-a910b809218d",
+        "model": "grok-4.7"
+      },
+      "human_author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    },
+    "s_7a20854ee1150d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "32244883-0d3a-40c1-a4c5-270a71b84840",
+        "model": "grok-4.7"
+      },
+      "human_author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    },
+    "s_840dbfb287e1d5": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "1ffb1d0d-1e64-43ac-8f16-4eef51a5a152",
+        "model": "grok-4.7"
+      },
+      "human_author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    }
+  }
+}
