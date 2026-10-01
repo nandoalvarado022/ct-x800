@@ -1,0 +1,131 @@
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid var(--line);
+  background: var(--header);
+  backdrop-filter: blur(18px);
+}
+
+.inner {
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0 auto;
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+  padding: 0.7rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.brand strong {
+  display: block;
+  font-size: 1.05rem;
+  letter-spacing: -0.03em;
+}
+
+.brand small {
+  display: block;
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+}
+
+.mark {
+  width: 2.4rem;
+  height: 1.6rem;
+  color: var(--mark);
+}
+
+.markInk {
+  fill: var(--mark-ink);
+}
+
+.nav {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--muted);
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+}
+
+.nav a[aria-current="page"] {
+  color: var(--nav-active-text);
+  background: var(--nav-active);
+}
+
+.rank {
+  min-width: 9.5rem;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.15rem 0.75rem;
+  padding: 0.4rem 0.7rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--rank);
+}
+
+.rank span:first-child {
+  color: var(--faint);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rank strong {
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+}
+
+.meter {
+  grid-column: 1 / -1;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: var(--meter);
+  overflow: hidden;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--purple), var(--orange));
+}
+
+.themeToggle {
+  border: 1px solid var(--line);
+  background: var(--chip);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.toDark {
+  display: none;
+}
+
+:global(html[data-theme="light"]) .toLight {
+  display: none;
+}
+
+:global(html[data-theme="light"]) .toDark {
+  display: inline;
+}

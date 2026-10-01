@@ -1,0 +1,101 @@
+.article {
+  max-width: 760px;
+}
+
+.crumb {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  color: var(--faint);
+  font-size: 0.92rem;
+}
+
+.crumb a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.header {
+  margin: 1rem 0 1.4rem;
+}
+
+.header p:first-child {
+  margin: 0 0 0.5rem;
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.description {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 1.12rem;
+  line-height: 1.5;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  border-radius: 999px;
+  padding: 0.28rem 0.6rem;
+  background: var(--chip);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.next {
+  margin: 1.2rem 0 0;
+}
+
+.next a {
+  color: var(--purple-2);
+  font-weight: 700;
+}
+
+.related {
+  margin-top: 2.5rem;
+}
+
+.related h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.2rem;
+}
+
+.related ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.related a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+
+.related span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}

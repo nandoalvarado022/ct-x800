@@ -1,0 +1,54 @@
+.root {
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.root h2,
+.root h3 {
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 1.8rem 0 0.6rem;
+}
+
+.root h2 {
+  font-size: 1.45rem;
+}
+
+.root p,
+.root ul,
+.root ol {
+  margin: 0.7rem 0;
+}
+
+.root ul,
+.root ol {
+  padding-left: 1.2rem;
+}
+
+.root li + li {
+  margin-top: 0.35rem;
+}
+
+.root strong {
+  color: var(--text);
+}
+
+.root a {
+  color: var(--orange-2);
+}
+
+.root code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.92em;
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+  background: var(--chip);
+}
+
+.root blockquote {
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid var(--purple);
+  color: var(--muted);
+}

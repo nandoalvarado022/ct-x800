@@ -1,0 +1,171 @@
+[
+  {
+    "id": "config-pedal-01",
+    "type": "documentation",
+    "title": "Cómo configurar el pedal de sustain",
+    "slug": "configurar-pedal-sustain",
+    "description": "Guía rápida para asignar y comprobar el pedal en el CT-X800: sustain, sostenuto, soft o inicio del ritmo.",
+    "tags": [
+      "pedal",
+      "sustain",
+      "configuración",
+      "hardware"
+    ],
+    "content": "El CT-X800 tiene un jack de pedal estándar. Acepta un pedal de interruptor, como el Casio SP-3 o el SP-20, y puede trabajar como sustain, sostenuto, soft o arranque del ritmo. No calibra un recorrido continuo: no es el medio pedal de un piano de escenario.\n\n## Conectar\n\n1. Apaga el teclado o baja el volumen.\n2. Enchufa el pedal en la toma **PEDAL** de la parte posterior. Es un jack estándar, distinto de PHONES/OUTPUT y de AUDIO IN.\n3. Enciende y toca una nota. Con el efecto de fábrica (sustain), mantén el pedal pisado, suelta la tecla y el sonido debe seguir hasta que levantes el pie.\n\nSi un pedal de otra marca hace lo contrario —sostiene al soltarlo—, el problema suele ser la polaridad del interruptor. El CT-X800 no incluye un ajuste de polaridad: usa un pedal con interruptor de polaridad o un modelo pensado para Casio.\n\n## Elegir el efecto\n\n1. Pulsa **FUNCTION**.\n2. Busca el ítem **Pedal** con el dial o con los botones de valor y confírmalo.\n3. Elige el efecto en pantalla:\n   - **Sustain**: alarga lo que estés tocando mientras el pedal sigue pisado.\n   - **Sostenuto**: solo alarga las notas que ya estaban pulsadas en el momento de pisar. Lo que toques después suena normal.\n   - **Soft**: baja el nivel de las notas que tocas con el pedal hundido.\n   - **Rhythm**: el pedal arranca y para el ritmo o la canción, útil si no quieres soltar el teclado para pulsar START/STOP.\n4. Pulsa **FUNCTION** otra vez para volver a tocar.\n\n## Comprobar que quedó bien\n\nToca un acorde de Do mayor, pisa el pedal y suelta las teclas. En sustain el acorde permanece. Cambia a sostenuto, mantén solo el Do, pisa el pedal y luego toca un Mi y un Sol: el Do se queda y las otras dos notas no. Si nada cambia, revisa que el plug haya entrado hasta el fondo y que el volumen no esté en cero.\n\nEl pedal no se guarda como un archivo aparte: si quieres recuperar tono, ritmo y efecto de pedal juntos, guarda la escena en una memoria de registro."
+  },
+  {
+    "id": "config-tactil-01",
+    "type": "documentation",
+    "title": "Ajustar la respuesta al tacto",
+    "slug": "respuesta-al-tacto",
+    "description": "Los tres niveles de sensibilidad del CT-X800 y cuándo conviene apagar el tacto.",
+    "tags": [
+      "tacto",
+      "expresión",
+      "configuración",
+      "teclado"
+    ],
+    "content": "Las 61 teclas del CT-X800 leen la velocidad del ataque. La especificación publicada ofrece **tres niveles de sensibilidad** y la posición **off**. La fuente AiX usa esa velocidad para abrir el tono: un piano suena más brillante si golpeas, y más suave si rozas la tecla.\n\n## Cambiar el nivel\n\n1. Pulsa **FUNCTION**.\n2. Entra en **Touch** (respuesta al tacto).\n3. Prueba los tres niveles con la misma frase, sin cambiar de tono.\n4. Deja el nivel con el que el piano de la biblioteca responda a tu mano, no al revés.\n\nOff existe para sonidos que en un escenario no deberían depender de la fuerza: órganos, pads, bajos de acompañamiento o una parte que estás secuenciando y quieres pareja. Con el tacto apagado, cada nota sale a una velocidad fija.\n\n## Qué no hace este ajuste\n\nNo cambia la polifonía ni el volumen general. El volumen sigue en la perilla principal. Si el piano suena débil aunque golpees fuerte, sube primero el volumen y después revisa el tacto. Algunos tonos usan menos polifonía (la ficha de Casio indica 24 notas en ciertos sonidos): si el acorde se corta, estás en el límite de voces, no en un problema del tacto.\n\nPara practicar dinámica, deja el tacto activo, elige un tono de piano y usa el metrónomo a un tempo cómodo. La lección de frase en Do mayor sirve para escucharlo."
+  },
+  {
+    "id": "config-split-01",
+    "type": "documentation",
+    "title": "Dividir y superponer sonidos",
+    "slug": "split-y-layer",
+    "description": "Cómo usar Split y Layer para un bajo con acordes, o dos tonos en la misma tecla.",
+    "tags": [
+      "split",
+      "layer",
+      "tonos",
+      "configuración"
+    ],
+    "content": "El CT-X800 parte de **600 tonos** y puede usarlos de dos maneras a la vez: **Split** corta el teclado en dos zonas y **Layer** apila dos sonidos en las mismas teclas. El botón **Piano/Organ** salta a esos timbres sin recorrer toda la lista.\n\n## Layer\n\n1. Elige el tono principal, por ejemplo un piano.\n2. Activa **Layer**.\n3. Elige el segundo tono, por ejemplo cuerdas o un pad suave.\n4. Toca un acorde. Debes oír las dos capas. Si una tapa a la otra, cambia el segundo tono antes de subir el volumen general: el volumen es único para la salida principal.\n\nLayer suma voces. Un piano más un pad consume polifonía el doble de rápido. Con la polifonía máxima de 48 notas, un acorde largo con pedal y un ritmo sonando puede llegar al límite. Si las notas se roban, quita una capa.\n\n## Split\n\n1. Activa **Split**.\n2. La mano izquierda queda en un tono (bajo o sección rítmica) y la derecha en otro.\n3. El punto de corte se ajusta en el ítem de punto de división dentro de **FUNCTION**. La pantalla muestra la nota. Muévelo hasta que el bajo no invada la melodía.\n4. Para volver a un solo sonido en todo el teclado, desactiva Split y Layer.\n\nSplit y Layer pueden combinarse, pero es más fácil memorizar la escena cuando ya te guste. Guárdala en un registro antes de cambiar de canción: si apagas el equipo sin registrar, la combinación no tiene por qué seguir ahí al encender.\n\n## Prueba rápida\n\nPon un bajo a la izquierda y un piano a la derecha. Toca la fundamental con la izquierda y la melodía con la derecha. Si el bajo suena en la zona de la melodía, corre el punto de split hacia la izquierda."
+  },
+  {
+    "id": "config-registro-01",
+    "type": "documentation",
+    "title": "Memorias de registro",
+    "slug": "memorias-de-registro",
+    "description": "Guarda tono, ritmo, tempo y modo de teclado en las memorias de registro del CT-X800.",
+    "tags": [
+      "registro",
+      "directo",
+      "configuración",
+      "memoria"
+    ],
+    "content": "Un registro es una fotografía de la configuración con la que quieres salir a tocar: tono, ritmo, tempo, split, layer y otros ajustes de la escena. La especificación publicada del CT-X800 recoge **16 memorias de registro**. No son canciones. Si lo que quieres conservar es una interpretación nota a nota, eso va al grabador o a una canción de usuario.\n\n## Guardar la escena\n\n1. Deja el teclado como quieres escucharlo. Elige tono, ritmo y tempo. Activa split o layer si hacen falta.\n2. Entra en el modo de registro y elige el banco y el espacio de destino.\n3. Guarda con la operación de almacenamiento del panel (STORE / registro, según la serigrafía).\n4. Cambia a propósito de tono y vuelve a llamar ese registro. Tiene que regresar la escena anterior.\n\n## Llamar un registro en medio de un tema\n\nLlama el registro un compás antes del cambio, no encima del tiempo fuerte, para que el nuevo tono no entre a destiempo. Si además cambias de ritmo, espera al final de una frase.\n\nLos registros viven en la memoria del teclado. Para no depender de un solo equipo, la memoria USB puede guardar y cargar datos del instrumento, incluidas las configuraciones, desde el menú de operaciones USB. Formatea esa unidad en el propio CT-X800 antes de usarla por primera vez: el formateo borra lo que hubiera dentro.\n\n## Qué no cabe en un registro\n\nNo sustituye a las 10 canciones de usuario ni a las 5 canciones del grabador de 6 pistas. Tampoco alarga el pedal ni cambia la polifonía. Piensa en el registro como el preset de un directo, y en el grabador como la cinta."
+  },
+  {
+    "id": "config-afinacion-01",
+    "type": "documentation",
+    "title": "Transposición y afinación",
+    "slug": "transposicion-y-afinacion",
+    "description": "Sube o baja el teclado por semitonos y afina el La central para tocar con otros.",
+    "tags": [
+      "transpose",
+      "afinación",
+      "configuración",
+      "tono"
+    ],
+    "content": "Hay dos ajustes distintos y conviene no mezclarlos. **Transpose** mueve toda la interpretación por semitonos: sirva para cantar una canción en otra tonalidad sin cambiar de digitación. **Tune** mueve la afinación maestra en cents, alrededor de La4 = 440 Hz, para empatar con un piano acústico o una grabación que no está en 440.\n\nEn esta serie la transposición recorre de **−12 a +12** semitonos. La afinación se edita en **FUNCTION** y la pantalla muestra el valor.\n\n## Transponer\n\n1. Pulsa **FUNCTION** y entra en **Transpose**.\n2. Sube o baja de uno en uno. +2 semitonos convierte una digitación en Do en una sonoridad de Re.\n3. Toca la misma posición de antes y comprueba con un afinador o con la otra persona de la banda.\n4. Vuelve a 0 al terminar. Un transpose olvidado es la causa más común de “hoy el teclado está raro”.\n\n## Afinar\n\n1. En **FUNCTION**, abre **Tune**.\n2. Ajusta mientras suena un La de referencia. Muévelo poco: unos cents se notan, un salto grande ya es otra nota y para eso está la transposición.\n3. Si usas AUDIO IN para tocar encima de una pista, afina el CT-X800 contra esa pista, no al revés.\n\nLa rueda de pitch bend no sustituye a estos ajustes: la rueda es un gesto momentáneo y vuelve al centro. El rango de la rueda es otro parámetro, de 0 a 24 semitonos."
+  },
+  {
+    "id": "config-metro-01",
+    "type": "documentation",
+    "title": "Metrónomo, tempo y compás",
+    "slug": "metronomo",
+    "description": "El metrónomo del CT-X800 va de 20 a 255 BPM y marca de 0 a 9 tiempos por compás.",
+    "tags": [
+      "metrónomo",
+      "tempo",
+      "práctica",
+      "ritmo"
+    ],
+    "content": "El metrónomo es la referencia de tiempo tanto para practicar a manos separadas como para clavar un ritmo del acompañamiento. En el CT-X800 el tempo va de **20 a 255** y el compás puede marcar de **0 a 9** tiempos.\n\n## Ponerlo en marcha\n\n1. Pulsa el botón de metrónomo. El click empieza con el tempo que haya en pantalla.\n2. Ajusta el tempo con **TEMPO** y el dial. Para estudiar, baja 10 o 20 BPM respecto al tempo final de la canción.\n3. Si el click no coincide con la canción del banco, mira el tempo de esa canción en pantalla y copia el número. No hace falta adivinarlo.\n4. El número de tiempos por compás se cambia en el ajuste del metrónomo. Un 4 marca un acento cada cuatro clicks. Un 3 sirve para un vals. 0 deja el click parejo, sin acento.\n\n## Practicar con él\n\nToca solo la mano derecha durante cuatro compases. Para. Entra la izquierda otros cuatro. Únelas cuando las dos aguanten el click sin correrse. La evaluación de las lecciones Step Up también mira el tiempo: un metrónomo previo evita que la puntuación baje por prisa, no por notas equivocadas.\n\nEl volumen del click es independiente de la idea musical. Si tapa el piano, bájalo en el ajuste del metrónomo antes de subir el volumen general del teclado."
+  },
+  {
+    "id": "config-ritmo-01",
+    "type": "documentation",
+    "title": "Ritmos, acordes y Chord Book",
+    "slug": "acompanamiento-automatico",
+    "description": "Los 195 ritmos, el acompañamiento automático y la forma de consultar un acorde en pantalla.",
+    "tags": [
+      "ritmo",
+      "acordes",
+      "acompañamiento",
+      "chord book"
+    ],
+    "content": "El CT-X800 incluye **195 ritmos** y espacio para **10 ritmos de usuario**, de unos 64 KB cada uno. Con el acompañamiento automático, la mano izquierda dispara bajo, armonía y batería según el acorde que formes. **Chord Book** muestra en pantalla cómo se digita un acorde cuando no quieres adivinarlo.\n\n## Solo la batería\n\n1. Pulsa **RHYTHM** y elige un estilo con el dial o las categorías.\n2. Ajusta el tempo.\n3. Pulsa **START/STOP**. Suena la sección rítmica, sin acordes, hasta que actives el acompañamiento completo.\n4. **INTRO**, las variaciones y **ENDING** cambian la sección. Synchro Start espera a que toques la primera nota o el primer acorde para entrar.\n\n## Acompañamiento con acordes\n\n1. Activa el modo de acompañamiento.\n2. En la zona izquierda del teclado, forma el acorde. Según el modo de digitación puedes usar acordes completos (Fingered) o el sistema simplificado Casio Chord.\n3. El nombre del acorde aparece en la pantalla. Si no es el que creías, corrige la digitación antes de memorizar el gesto.\n4. Cambia de acorde en el tiempo: llegar tarde se oye más que equivocar una extensión.\n\nChord Book sirve para consultar. Ábrelo, elige el acorde y lee la digitación que muestra el LCD. Luego ciérralo y tócalo encima del ritmo, ya sin mirar cada dedo.\n\nPara guardar un ritmo editado o uno cargado, usa un espacio de ritmo de usuario. No ocupes una canción de usuario para eso: son memorias distintas."
+  },
+  {
+    "id": "config-fx-01",
+    "type": "documentation",
+    "title": "Reverb, chorus y ecualización",
+    "slug": "reverb-chorus-y-ecualizador",
+    "description": "Profundidad de reverb de 1 a 20, chorus de 1 a 10 y el ecualizador general.",
+    "tags": [
+      "reverb",
+      "chorus",
+      "efectos",
+      "sonido"
+    ],
+    "content": "La especificación del CT-X800 separa dos efectos globales. **Reverb** va de 1 a 20, o puede quedar en off. **Chorus** va de 1 a 10, o puede seguir el chorus que ya trae el tono. Además, el manual incluye un ajuste de ecualizador para la salida general: es el color de todo el equipo, no un inserto por pista.\n\n## Elegir una reverb\n\n1. En **FUNCTION**, abre **Reverb**.\n2. Off es lo más seco y lo más útil si vas a grabar por la salida de auriculares hacia una mesa que ya tiene su propia reverb.\n3. Un valor bajo (alrededor del primer tercio) alcanza para practicar en una habitación. Los valores altos empastan los ataques del piano y hacen que el metrónomo parezca tarde.\n4. Si usas Layer de piano y cuerdas, baja la reverb: las cuerdas ya traen cola.\n\n## Chorus\n\nUn chorus bajo ensancha pads y guitarras eléctricas. En un piano acústico suele sobrar. Si el tono ya incluye chorus y lo duplicas con el chorus maestro, el sonido se mueve demasiado. Déjalo en el ajuste “tono” cuando quieras respetar el preset.\n\n## Ecualizador\n\nCambia el ecualizador cuando el altavoz interno suene opaco, o cuando la salida de auriculares vaya a un equipo con mucho grave. Anota el preset que te sirve en casa y el que te sirve en ensayo: puedes dejar cada uno dentro de un registro distinto junto con el tono.\n\nEstos efectos no aumentan la polifonía ni arreglan un archivo MIDI saturado. Si una canción importada suena turbia, revisa primero el SMF y el volumen de cada parte."
+  },
+  {
+    "id": "config-usb-midi-01",
+    "type": "documentation",
+    "title": "Conectar el CT-X800 por USB-MIDI",
+    "slug": "conexion-usb-midi",
+    "description": "El puerto Type B habla MIDI de clase compatible con el ordenador, a 16 canales GM.",
+    "tags": [
+      "midi",
+      "usb",
+      "ordenador",
+      "daw"
+    ],
+    "content": "El CT-X800 no trae conectores DIN de 5 pines. El MIDI viaja por el **puerto USB Type B**, el cuadrado que va al ordenador. El **puerto Type A** es el de la memoria USB y no sirve para el DAW. Casio publica esta conexión como **GM nivel 1**, con recepción multitímbrica de **16 canales**.\n\nEn sistemas actuales el puerto es de clase compatible: macOS y Windows lo ven sin un driver aparte. El nombre habitual del dispositivo es **CASIO USB-MIDI**.\n\n## Cablear\n\n1. Enciende el teclado.\n2. Conecta un cable USB-B en el teclado y USB-A (o el adaptador que use tu ordenador) en el equipo.\n3. En el DAW, elige la entrada y la salida CASIO USB-MIDI. No hace falta un interfaz en medio.\n4. Toca una tecla. Si el medidor de entrada MIDI se mueve, la ruta está viva.\n\n## Notas dobles\n\nSi oyes cada nota dos veces, el teclado está sonando por dentro y además está reproduciendo el MIDI que el DAW le devuelve. Entra en **FUNCTION** y desactiva **Local Control**. El teclado sigue enviando lo que tocas, pero el sonido lo genera solo lo que regresa del ordenador. Vuelve a activar Local Control cuando desconectes el DAW: si lo dejas en off, las teclas parecen mudas.\n\n## Qué puedes hacer y qué no\n\nPuedes grabar la interpretación, disparar un instrumento virtual o dejar que un archivo GM suene con los tonos del CT-X800. No conviertas esta conexión en una carga de archivos: los SMF que quieres llevar en el bolsillo se copian a la memoria USB Type A, o se transfieren con la herramienta que Casio documenta para el ordenador. El puerto MIDI no formatea memorias ni sustituye al banco de 160 canciones."
+  },
+  {
+    "id": "config-usb-flash-01",
+    "type": "documentation",
+    "title": "Memoria USB: formato, SMF y copias",
+    "slug": "memoria-usb-archivos",
+    "description": "FAT32, SMF formato 0 o 1 y la diferencia entre reproducir, cargar y guardar.",
+    "tags": [
+      "usb",
+      "midi",
+      "smf",
+      "archivos",
+      "memoria"
+    ],
+    "content": "El puerto **USB Type A** del CT-X800 lee una memoria para tres trabajos: reproducir un SMF directamente, cargar datos a la memoria interna y guardar lo que hay en el teclado. La especificación lo resume como reproducción directa de SMF, almacenamiento, carga, borrado y formateo.\n\n## Preparar la unidad\n\n1. Usa una memoria **FAT32**. Si el ordenador la entregó en otro sistema de archivos, el teclado puede no verla.\n2. La primera vez, formátala desde el menú USB del propio CT-X800. El formateo **borra todo** el contenido.\n3. No retires la memoria mientras la pantalla indique que está trabajando.\n\n## Qué archivos entiende\n\nPara canciones, el archivo tiene que ser un **Standard MIDI File formato 0 o 1**, con extensión **.MID**. El formato 2 no es compatible. Cada canción de usuario admite alrededor de **320 KB**. Si el archivo es más grande, redúcelo en el ordenador (menos pistas mudas, menos datos de sistema repetidos) antes de copiarlo.\n\nHay **10** espacios de canción de usuario. Son independientes de las **5** canciones del grabador de 6 pistas y de las **160** canciones de fábrica.\n\n## Tres operaciones, no una\n\n- **Reproducir**: el archivo suena desde la memoria USB. No ocupa un espacio interno, pero la memoria tiene que estar puesta.\n- **Cargar (Load)**: copia la canción a uno de los 10 espacios de usuario. Después puedes dejar la memoria en casa.\n- **Guardar (Save)**: saca del teclado una canción, un ritmo, un registro o una copia de los datos hacia la memoria.\n\nLa guía paso a paso para traer una canción nueva está en el módulo de aprendizaje, en «Importar una canción MIDI»."
+  },
+  {
+    "id": "config-bend-01",
+    "type": "documentation",
+    "title": "Rueda de pitch bend",
+    "slug": "rueda-de-pitch-bend",
+    "description": "El rango de la rueda va de 0 a 24 semitonos y el gesto siempre vuelve al centro.",
+    "tags": [
+      "pitch bend",
+      "expresión",
+      "rueda",
+      "configuración"
+    ],
+    "content": "La rueda del lado izquierdo desplaza la afinación mientras la mueves y **regresa al centro** cuando la sueltas. No deja el teclado transpuesto. Para un cambio fijo de tonalidad usa Transpose.\n\nEl rango publicado es de **0 a 24 semitonos**. 0 anula el efecto. 2 es un tono entero, el gesto clásico de guitarra o de viento. 12 es una octava y se usa como efecto, no como afinación.\n\n## Ajustar el rango\n\n1. Abre **FUNCTION** y entra en el parámetro de rango del pitch bend.\n2. Elige el número de semitonos.\n3. Sostén una nota y lleva la rueda arriba y abajo. El centro tiene que devolver la nota original. Si no vuelve, la rueda no está en el reposo mecánico: suéltala del todo.\n\nEn un solo de sintetizador, un rango de 2 deja el fraseo cantable. En un órgano, muchos prefieren 0 para no desafinar un acorde sin querer. Guarda ese valor dentro del registro del tema.\n\nLa rueda envía pitch bend también por USB-MIDI. Si un instrumento virtual del ordenador responde con otra curva, el rango que manda es el del programa, no solo el del CT-X800."
+  },
+  {
+    "id": "config-audio-01",
+    "type": "documentation",
+    "title": "Auriculares, salida y Audio In",
+    "slug": "audio-auriculares-y-alimentacion",
+    "description": "PHONES/OUTPUT, la entrada de audio para tocar encima de una pista y la alimentación del equipo.",
+    "tags": [
+      "auriculares",
+      "audio",
+      "alimentación",
+      "hardware"
+    ],
+    "content": "El CT-X800 concentra la escucha en dos jacks y una alimentación de dos vías.\n\n## PHONES/OUTPUT\n\nEs un **jack estéreo estándar**. La ficha técnica indica una impedancia de salida de **167 Ω** y un máximo de **4,5 V RMS**. Sirve para auriculares y también para mandar la señal a una mesa o a una interfaz, con el cable adecuado (de jack estéreo a dos jacks mono, o a la entrada que acepte estéreo).\n\nBaja el volumen del CT-X800 antes de conectar. Sube después. Si la mesa distorsiona con el volumen del teclado a la mitad, baja el teclado y sube la ganancia de la mesa solo hasta que el pico quede limpio.\n\nAl usar auriculares cuidas el altavoz interno y escuchas el metrónomo sin llenar la casa. No duermas el volumen al máximo con cascos: la salida puede entregar más nivel del que parece.\n\n## AUDIO IN\n\nEl minijack estéreo de entrada tiene **10 kΩ** de impedancia y **200 mV** de sensibilidad. Está pensado para un teléfono, una tableta o un reproductor, para tocar encima de una pista.\n\n1. Baja el volumen del aparato externo.\n2. Conéctalo a **AUDIO IN**.\n3. Sube su volumen hasta que la pista y el piano convivan. El volumen principal del CT-X800 no sustituye al volumen del teléfono: son dos etapas.\n\nEsta entrada no graba el audio externo dentro de una canción de usuario. Si necesitas quedarte con la mezcla, graba por fuera, desde PHONES/OUTPUT, en la interfaz.\n\n## Alimentación\n\nPuedes usar **6 pilas AA alcalinas** o el adaptador de red previsto para el modelo. Si el teclado se apaga solo a mitad de un ensayo largo, revisa el apagado automático en **FUNCTION** antes de sospechar de las pilas. Con pilas flojas aparecen cortes, pantallas débiles o un reinicio: cámbialas todas a la vez, no de una en una.\n\nDesconecta el adaptador del enchufe si no vas a usar el equipo en varios días, y no dejes las pilas puestas durante meses si el adaptador es el que trabaja siempre."
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "learn-step-01",
+    "type": "learning",
+    "title": "Las tres lecciones Step Up",
+    "slug": "lecciones-step-up",
+    "description": "Escuchar, mirar y recordar: el recorrido con el que el CT-X800 enseña cada frase de una canción.",
+    "tags": [
+      "lección",
+      "step up",
+      "canciones",
+      "práctica"
+    ],
+    "difficulty": "fácil",
+    "content": "El sistema Step Up parte una canción en frases cortas. No te pide la pieza entera el primer día. Las tres lecciones se llaman **Listen**, **Watch** y **Remember**: escuchar, mirar y recordar. Existe además un **Easy Mode** cuando la digitación completa todavía estorba.\n\nEsta práctica usa cualquier canción del banco. Elige una lenta.\n\n## Paso 1. Escuchar\n\n1. Pulsa **SONG BANK** y elige una de las **160** canciones, o la demo.\n2. Entra en **LESSON** y selecciona la lección 1, Listen.\n3. Pulsa **START/STOP**. Tú no tocas. Mira el pentagrama, el número de compás y el nombre del acorde.\n4. Repite la misma frase hasta poder tararearla. La función de repetición evita tener que volver al principio de la canción.\n\n## Paso 2. Mirar\n\n1. Pasa a la lección 2, Watch.\n2. El teclado espera tus notas y te guía. La **guía de digitación por voz** y la **guía de notas** indican el dedo y la tecla.\n3. Toca despacio. Si te atrasas, la lección te sostiene: no adelantes el tempo para “ganar”.\n4. Cuando la frase salga sin mirar los dedos en la pantalla, estás listo para la tercera.\n\n## Paso 3. Recordar\n\n1. Entra en la lección 3, Remember.\n2. Aquí la guía se retira. Toca la frase de memoria, a tiempo.\n3. Al terminar, la **evaluación** puntúa la interpretación. Una nota justa fuera de tiempo cuenta. Vuelve a Watch solo en el compás que falle, no en la canción entera.\n\nEasy Mode reduce la exigencia de la parte. Úsalo para aprender el mapa de la frase y quítalo en cuanto las dos manos sepan dónde caen.\n\nCuando cierres la lección, el banco sigue en la canción que elegiste. Anota su número: mañana no tendrás que buscarla por el nombre."
+  },
+  {
+    "id": "learn-partes-01",
+    "type": "learning",
+    "title": "Practicar por manos",
+    "slug": "practicar-por-manos",
+    "description": "Silencia la mano derecha, la izquierda o deja las dos, y estudia cada parte con la lección.",
+    "tags": [
+      "lección",
+      "manos",
+      "partes",
+      "práctica"
+    ],
+    "difficulty": "fácil",
+    "content": "Cada canción del banco puede estudiarse con la parte de la **mano derecha**, la **izquierda** o **las dos**. El CT-X800 llama a esa elección Part Select: R, L o LR. La pantalla de información musical enseña pentagrama, digitación, pedal, tempo, compás y acorde.\n\n## La derecha sola\n\n1. Elige la canción y abre la lección.\n2. Selecciona la parte **R**.\n3. El teclado reproduce el acompañamiento y calla la melodía, que ahora es tuya.\n4. Recorre Listen y Watch solo con esa mano. No añadas la izquierda “para probar”.\n\n## La izquierda sola\n\n1. Cambia a la parte **L**.\n2. Muchas canciones del banco usan ahí bajos y acordes, no una segunda melodía. Lee el nombre del acorde en pantalla antes de buscar la forma.\n3. Si la izquierda se cruza con la derecha, estás fuera de tu zona: vuelve a mirar el punto donde cada parte vive en el pentagrama.\n\n## Las dos\n\n1. Pasa a **LR** solo cuando cada mano aguante su lección Watch sin parar el tempo.\n2. Baja el tempo del metrónomo o de la canción. Subirlo es el último paso, no el primero.\n3. Cuatro compases limpios valen más que la canción entera a trompicones. Usa la repetición de frase.\n\nLa evaluación con las dos manos es más estricta porque un fallo en cualquiera de las dos baja el resultado. Si la puntuación cae, no cambies de canción: identifica qué mano llegó tarde."
+  },
+  {
+    "id": "learn-banco-01",
+    "type": "learning",
+    "title": "Recorrer el banco de 160 canciones",
+    "slug": "banco-de-canciones",
+    "description": "Elige una canción integrada, léela en pantalla y decide si hoy toca escuchar o estudiar.",
+    "tags": [
+      "canciones",
+      "song bank",
+      "repertorio",
+      "práctica"
+    ],
+    "difficulty": "fácil",
+    "content": "El banco trae **1 canción de demostración** y **160 canciones** para estudiar. No ocupan los 10 espacios de usuario. Sirven para conocer estilos y para alimentar las lecciones Step Up.\n\n## Elegir y escuchar\n\n1. Pulsa **SONG BANK**.\n2. Gira el dial o usa la selección numérica hasta ver el número y el nombre en el LCD.\n3. Pulsa **START/STOP**. Mira a la vez el tempo, el compás y el acorde: esa pantalla es parte de la práctica, no un adorno.\n4. Para repetir un trozo, marca la repetición A-B si la canción te deja fijar el pasaje, o usa la frase de la lección.\n\n## Decidir el trabajo de hoy\n\nHaz una pasada de escucha y anota tres cosas en un papel o en el móvil:\n\n- el número de la canción\n- el tempo que marca la pantalla\n- qué mano te resulta ajena\n\nEsa canción será la de la semana. Cambiar de pieza cada diez minutos impide que Remember llegue a evaluarte con justicia.\n\n## Lo que no está en el banco\n\nUna canción que trajiste en MIDI no aparece entre las 160. Vive en la memoria USB o en un espacio de usuario. Si START/STOP arranca una pieza de fábrica y tú buscabas tu archivo, estás en el banco interno: cambia a la fuente USB o al número de usuario donde la cargaste.\n\nEl botón de demo reproduce la pieza de demostración del instrumento. No borra tu registro ni tu canción de usuario, pero sí toma el audio. Bájala antes de seguir estudiando."
+  },
+  {
+    "id": "learn-do-01",
+    "type": "learning",
+    "title": "Frase en Do mayor con la derecha",
+    "slug": "frase-en-do-mayor",
+    "description": "Cuatro compases para fijar digitación, tacto y metrónomo antes de abrir una canción del banco.",
+    "tags": [
+      "práctica",
+      "digitación",
+      "mano derecha",
+      "metrónomo"
+    ],
+    "difficulty": "fácil",
+    "content": "Esta frase es un ejercicio de estudio, no una canción del banco. Sirve para que los dedos 1, 2 y 3 de la mano derecha obedezcan al metrónomo antes de pedirle a Step Up una pieza entera.\n\nElige un tono de piano. Deja el tacto en un nivel medio. Tempo **72**. Compás de **4** tiempos.\n\n## Las notas\n\nCada sílaba es una negra, salvo el silencio final de cada tercer grupo. La digitación va entre paréntesis.\n\n1. Do (1) Re (2) Mi (3) Do (1)\n2. Do (1) Re (2) Mi (3) Do (1)\n3. Mi (3) Fa (4) Sol (5), y un silencio\n4. Mi (3) Fa (4) Sol (5), y un silencio\n\nQuédate en una sola octava, la que te caiga delante del cuerpo, sin abrir el codo.\n\n## Cómo estudiarla\n\n1. Enciende el metrónomo a 72.\n2. Di los nombres de las notas en voz alta mientras tocas, una por click.\n3. Repite los dos primeros compases hasta que el pulgar vuelva a Do sin mirar.\n4. Añade los compases 3 y 4. El silencio también se cuenta: no adelantes el Mi.\n5. Sube a 84 solo cuando cuatro vueltas seguidas salgan sin chocar una tecla vecina.\n\n## Qué escuchar\n\nCon el tacto activo, la primera nota de cada compás puede ser un poco más profunda y las otras más ligeras. Si todas suenan igual de fuerte, no estás usando la sensibilidad: revisa que Touch no esté en off.\n\nCuando esta frase sea aburrida de lo fácil, abre el banco y aplica la misma regla: primero el tiempo, después la velocidad."
+  },
+  {
+    "id": "learn-midi-01",
+    "type": "learning",
+    "title": "Importar una canción MIDI",
+    "slug": "importar-cancion-midi",
+    "description": "Copia un SMF a una memoria FAT32 y cárgalo en uno de los 10 espacios de usuario del CT-X800.",
+    "tags": [
+      "midi",
+      "usb",
+      "importar",
+      "canciones",
+      "smf"
+    ],
+    "difficulty": "medio",
+    "content": "Esta práctica deja una canción nueva dentro del teclado, en uno de los **10** espacios de usuario. El archivo tiene que ser un **SMF formato 0 o 1**, extensión **.MID**, de unos **320 KB** como máximo. El formato 2 no sirve.\n\nNecesitas una memoria USB y un ordenador. El puerto correcto del teclado es el **Type A**. El Type B es solo para MIDI con el ordenador y no lee archivos.\n\n## Paso 1. Preparar la memoria\n\n1. Inserta la memoria en el puerto USB Type A del CT-X800.\n2. Ábrela en el menú de operaciones USB y **formatéala** si es la primera vez que este teclado la usa. Acepta el aviso: el formateo borra la unidad.\n3. Cuando la pantalla termine, retira la memoria con el equipo en un estado de reposo, no a mitad de un mensaje de trabajo.\n\n## Paso 2. Copiar el archivo\n\n1. Conecta la memoria al ordenador.\n2. Copia el `.mid` a la unidad. Evita nombres enormes y caracteres raros si el LCD luego no los muestra bien: `estudio-01.mid` es suficiente.\n3. Expulsa la unidad desde el sistema operativo.\n4. Si el archivo pesa más de unos 320 KB, ábrelo en un editor MIDI, borra pistas vacías y datos que no uses, y vuelve a exportar en formato 0 o 1.\n\n## Paso 3. Cargar al espacio de usuario\n\n1. Inserta la memoria otra vez en el Type A y espera a que el teclado la monte.\n2. Entra en las operaciones USB y elige **Load** para **Song**.\n3. Señala el archivo.\n4. Elige el número de usuario de destino, del 1 al 10. Si ese número ya tenía algo, la carga lo sustituye.\n5. Confirma y espera a que desaparezca el mensaje de trabajo. No pulses otros botones mientras tanto.\n\n## Paso 4. Comprobar\n\n1. Quita la memoria.\n2. Busca la canción de usuario que elegiste y pulsa **START/STOP**.\n3. Tiene que sonar igual, sin la memoria puesta. Si solo suena con la memoria conectada, hiciste una reproducción directa y no una carga. Repite el paso 3.\n\nLas lecciones Step Up están pensadas para el banco interno. Tu MIDI cargado se estudia con el metrónomo, a manos separadas, bajando el tempo en el ordenador si hace falta antes de exportar."
+  },
+  {
+    "id": "learn-smf-01",
+    "type": "learning",
+    "title": "Reproducir un SMF desde la memoria USB",
+    "slug": "reproducir-smf-desde-usb",
+    "description": "Escucha un MIDI sin ocupar un espacio interno: la reproducción directa del CT-X800.",
+    "tags": [
+      "midi",
+      "usb",
+      "smf",
+      "reproducción"
+    ],
+    "difficulty": "medio",
+    "content": "La reproducción directa sirve para probar un archivo antes de decidir si merece uno de los 10 espacios de usuario. El SMF suena desde la memoria. Si quitas la memoria, la canción no está dentro del teclado.\n\nSirve el mismo tipo de archivo: **formato 0 o 1**, extensión **.MID**, en una unidad **FAT32**.\n\n## Probar el archivo\n\n1. Copia el MIDI en la memoria, como en la lección de importación. No hace falta formatear si esta unidad ya funciona con el CT-X800.\n2. Inserta la memoria en el puerto **Type A**.\n3. Entra en el banco de canciones y cambia la fuente a la **memoria USB**, no al banco de 160.\n4. Gira el dial hasta ver tu archivo.\n5. Pulsa **START/STOP**.\n\n## Qué revisar mientras suena\n\n- Si el tempo va disparado, el archivo trae su propio tempo. Lo cambias en el ordenador y vuelves a copiar, o lo dejas y practicas por encima con el tempo que puedas.\n- Si falta un instrumento, ese canal puede ir a un programa GM que el CT-X800 sustituye por el tono GM más cercano. Es normal en una reproducción General MIDI.\n- Si la pantalla se queja del archivo, casi siempre es formato 2, un tipo que no es SMF, o un tamaño excesivo. Exporta de nuevo.\n\n## Pasar de la prueba a la memoria interna\n\nCuando el archivo te convenza, cárgalo con Load en un espacio de usuario. Hasta entonces no gastes esos 10 huecos en pruebas. Puedes borrar de la memoria USB, desde el menú del teclado, los MIDI que ya descartaste, para que el dial no se llene de versiones `final-final2`."
+  },
+  {
+    "id": "learn-rec-01",
+    "type": "learning",
+    "title": "Grabar en seis pistas",
+    "slug": "grabador-de-seis-pistas",
+    "description": "Registra una idea en el grabador MIDI: 6 pistas, 5 canciones y unas 40.000 notas.",
+    "tags": [
+      "grabador",
+      "pistas",
+      "midi",
+      "composición"
+    ],
+    "difficulty": "avanzado",
+    "content": "El grabador del CT-X800 es MIDI, en tiempo real. Publica **6 pistas**, **5 canciones** y una capacidad de unas **40.000 notas** por canción. No graba el audio de AUDIO IN. Si quieres el sonido tal como se oye por los altavoces, tienes que grabar por fuera, desde PHONES/OUTPUT.\n\nHay otro modo, distinto, para grabar tu interpretación **junto a una lección** del banco. No lo mezcles con estas 5 canciones de teclado: la lección usa su propio espacio de grabación.\n\n## Una pista limpia\n\n1. Elige el tono y el tempo **antes** de grabar. Cambiar el tono a mitad de la toma forma parte de la interpretación; cambiarlo después no reescribe la pista.\n2. Entra en el grabador y elige una de las 5 canciones que esté vacía, o una que aceptes sustituir.\n3. Arma la pista 1.\n4. Pulsa el inicio de grabación. Según el modo, el metrónomo da una cuenta. Entra en el tiempo, no un compás tarde.\n5. Toca la frase. Para con la parada del grabador.\n6. Escucha. Si no sirve, graba otra vez **esa** pista, no las seis.\n\n## Sumar las otras\n\n1. Lanza la reproducción de la pista 1 y arma la pista 2 con otro tono, por ejemplo un bajo.\n2. Graba solo cuando puedas seguir la pista 1 sin mirar las manos todo el tiempo.\n3. Reserva una pista para acordes largos y otra para la melodía. Seis pistas se acaban pronto si duplicas lo mismo.\n4. La polifonía sigue siendo de 48 notas. Un acorde de piano con pedal en dos pistas, más un pad, puede robar voces. Si una nota se corta, quita una capa o acorta el pedal en la toma.\n\n## Sacar la idea del teclado\n\nCuando la canción merezca la pena, guárdala en la memoria USB desde el menú de guardado, o pásala al ordenador con la herramienta que Casio documenta para este equipo. Las 5 memorias del grabador son de trabajo. No son un archivo eterno si otro día necesitas el espacio y confirmas un borrado.\n\nDesactiva el acompañamiento automático si no quieres que un ritmo se cuele en la toma. Lo que suena mientras grabas es lo que queda escrito."
+  },
+  {
+    "id": "learn-acordes-01",
+    "type": "learning",
+    "title": "Acordes con la mano izquierda",
+    "slug": "acordes-con-la-mano-izquierda",
+    "description": "Entra en el ritmo con tres acordes y usa Chord Book cuando la digitación no aparezca.",
+    "tags": [
+      "acordes",
+      "ritmo",
+      "acompañamiento",
+      "práctica"
+    ],
+    "difficulty": "medio",
+    "content": "El objetivo es sostener un ritmo del CT-X800 con la izquierda mientras la derecha hace una melodía mínima. Usarás tres acordes mayores: **Do**, **Fa** y **Sol**. El banco no hace falta. Hace falta un ritmo de **4** tiempos, lento.\n\n## Preparar\n\n1. Elige un ritmo claro, sin adornos de más. Pop o rock básico van bien.\n2. Tempo **80**.\n3. Activa el acompañamiento automático y el modo de acordes con digitación completa (Fingered), no el atajo, para que la mano aprenda la forma real.\n4. Abre **Chord Book**, mira Do mayor y cierra la ayuda. La forma es Do–Mi–Sol.\n\n## La rueda de acordes\n\nCuenta 4 tiempos en cada acorde. Cambia en el 1, no en el 4.\n\n1. Dos compases de Do\n2. Dos compases de Fa\n3. Dos compases de Sol\n4. Dos compases de Do\n\nFa mayor es Fa–La–Do. Sol mayor es Sol–Si–Re. Si el LCD muestra otro nombre, sobra o falta un dedo. Para y mira Chord Book otra vez. No memorices un acorde mal escrito.\n\n## Añadir la derecha\n\nCuando la izquierda cambie a tiempo durante dos vueltas, añade notas blancas de Do mayor con la derecha: Do, Re, Mi, Sol. Una nota por compás es suficiente. No hace falta una melodía larga.\n\nSynchro Start ayuda: el ritmo arranca al caer el primer acorde, y así no tienes que pulsar START/STOP con la mano ocupada. Si prefieres el pie, asigna el pedal a **Rhythm** y arranca desde ahí.\n\nGuarda la escena en un registro cuando el sonido te guste. Mañana el tempo y el ritmo seguirán juntos."
+  },
+  {
+    "id": "learn-eval-01",
+    "type": "learning",
+    "title": "Leer la evaluación de la lección",
+    "slug": "evaluacion-de-la-leccion",
+    "description": "Qué mide la puntuación de Remember y cómo repetir solo la frase que falló.",
+    "tags": [
+      "lección",
+      "evaluación",
+      "step up",
+      "práctica"
+    ],
+    "difficulty": "fácil",
+    "content": "La evaluación aparece al terminar una pasada de lección, sobre todo en **Remember**, cuando ya no hay guía. No premia el volumen ni el tono que elegiste. Mira si las notas fueron las de la frase y si entraron a tiempo.\n\nUna puntuación baja con las notas correctas casi siempre es prisa. Una puntuación baja con el tempo perfecto suele ser un dedo que se fue a la tecla de al lado.\n\n## Cómo usarla\n\n1. Elige una canción del banco que ya hayas hecho en Watch.\n2. Pasa a Remember, con una sola mano.\n3. Toca la frase entera sin parar a corregir: la evaluación necesita la toma completa.\n4. Lee el resultado. Vuelve a Listen solo si ya no recuerdas la melodía. Vuelve a Watch si sabes la melodía pero el dedo no llega.\n5. Repite la frase, no la canción. El sistema Step Up está partido en frases justamente para esto.\n\n## Una regla de estudio\n\nNo abras otra canción mientras la evaluación de esta siga cayendo por el mismo compás. Tres pasadas enfocadas en ese compás suben más que cambiar de pieza.\n\nEasy Mode puede darte una puntuación más amable. Sirve para no frustrarte el primer día. Cuando quieras saber de verdad cómo vas, quítalo y acepta el número.\n\nEl metrónomo, un tempo más bajo y la parte R o L separadas son las tres herramientas que mueven esa puntuación. El pedal de sustain, aquí, suele esconder una nota equivocada: estúdialo en off y conéctalo cuando la frase ya esté limpia."
+  }
+]

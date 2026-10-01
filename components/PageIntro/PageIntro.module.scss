@@ -1,0 +1,27 @@
+.header {
+  max-width: 44rem;
+  margin-bottom: 1.5rem;
+}
+
+.header p:first-child {
+  margin: 0 0 0.55rem;
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.lede {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.55;
+}

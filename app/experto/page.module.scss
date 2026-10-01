@@ -1,0 +1,42 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.8fr) 1.2fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.aside h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.3rem;
+  letter-spacing: -0.03em;
+}
+
+.aside p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.aside ul {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.aside a {
+  display: block;
+  text-decoration: none;
+  padding: 0.7rem 0.8rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  color: var(--purple-2);
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

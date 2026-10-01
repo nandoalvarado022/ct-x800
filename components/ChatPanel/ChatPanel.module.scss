@@ -1,0 +1,142 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-height: 34rem;
+  padding: 1rem;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: var(--chat);
+}
+
+.list {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 28rem;
+  padding-right: 0.2rem;
+}
+
+.user,
+.expert {
+  max-width: 92%;
+  padding: 0.8rem 0.9rem;
+  border-radius: 16px;
+}
+
+.user {
+  align-self: flex-end;
+  background: var(--bubble-user);
+}
+
+.expert {
+  align-self: flex-start;
+  background: var(--bubble-expert);
+  border: 1px solid var(--line);
+}
+
+.user p,
+.expert p {
+  margin: 0 0 0.3rem;
+  color: var(--faint);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.user div,
+.expert div {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.pending {
+  margin: 0;
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+}
+
+.error {
+  margin: 0;
+  color: var(--danger);
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.suggestions button,
+.form button {
+  cursor: pointer;
+}
+
+.suggestions button {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.4rem 0.7rem;
+  text-align: left;
+}
+
+.suggestions button:disabled,
+.form button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem;
+  align-items: flex-end;
+}
+
+.form textarea {
+  width: 100%;
+  resize: vertical;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--input);
+  color: var(--text);
+  padding: 0.8rem 0.9rem;
+}
+
+.form button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.85rem 1rem;
+  background: var(--orange);
+  color: #1a0d00;
+  font-weight: 700;
+}
+
+.hint,
+.sr {
+  margin: 0;
+  color: var(--faint);
+  font-size: 0.8rem;
+}
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
