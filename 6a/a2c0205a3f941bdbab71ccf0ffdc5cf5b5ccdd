@@ -1,0 +1,19 @@
+public/ads.txt
+  s_318a067e06581b::t_15362bba40f2a5 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6aa2c0205a3f941bdbab71ccf0ffdc5cf5b5ccdd",
+  "prompts": {},
+  "sessions": {
+    "s_318a067e06581b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "95d5f3a4-dff1-41e8-b43c-395af25d47b0",
+        "model": "grok-4.7"
+      },
+      "human_author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    }
+  }
+}
