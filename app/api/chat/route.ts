@@ -1,6 +1,8 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
-import { expertSystemPrompt } from "@/lib/expert";
+import { expertPrompt } from "@/lib/expert";
+import { parseLocale } from "@/lib/locale";
+import { messages } from "@/lib/messages";
 
 export const runtime = "nodejs";
 
@@ -48,32 +50,31 @@ function toHistory(value: unknown): ChatTurn[] {
 
 export async function POST(request: Request) {
   if (tooMany(request)) {
-    return NextResponse.json(
-      { error: "Demasiadas preguntas seguidas. Espera un momento." },
-      { status: 429 },
-    );
+    return NextResponse.json({ error: messages.en.chat.tooMany }, { status: 429 });
   }
 
   let payload: unknown;
   try {
     payload = await request.json();
   } catch {
-    return NextResponse.json({ error: "La solicitud no es válida." }, { status: 400 });
+    return NextResponse.json({ error: messages.en.chat.badRequest }, { status: 400 });
   }
 
   if (typeof payload !== "object" || payload === null) {
-    return NextResponse.json({ error: "La solicitud no es válida." }, { status: 400 });
+    return NextResponse.json({ error: messages.en.chat.badRequest }, { status: 400 });
   }
 
   const message = "message" in payload ? payload.message : undefined;
   const history = "history" in payload ? payload.history : undefined;
+  const locale = parseLocale("locale" in payload && typeof payload.locale === "string" ? payload.locale : "en");
+  const copy = messages[locale].chat;
 
   if (typeof message !== "string" || message.trim().length === 0) {
-    return NextResponse.json({ error: "Escribe una pregunta." }, { status: 400 });
+    return NextResponse.json({ error: copy.empty }, { status: 400 });
   }
 
   if (message.trim().length > 2000) {
-    return NextResponse.json({ error: "La pregunta es demasiado larga." }, { status: 400 });
+    return NextResponse.json({ error: copy.tooLong }, { status: 400 });
   }
 
   const apiKey = process.env.AI_API_KEY;
@@ -82,8 +83,7 @@ export async function POST(request: Request) {
   if (!apiKey) {
     return NextResponse.json(
       {
-        error:
-          "El experto no está configurado. Añade AI_API_KEY y AI_MODEL en .env.local y reinicia el servidor.",
+        error: copy.unconfigured,
       },
       { status: 503 },
     );
@@ -93,7 +93,7 @@ export async function POST(request: Request) {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
       model: modelName,
-      systemInstruction: expertSystemPrompt,
+      systemInstruction: expertPrompt(locale),
     });
     const turns = toHistory(history);
     const chat = model.startChat(turns.length > 0 ? { history: turns } : {});
@@ -101,14 +101,14 @@ export async function POST(request: Request) {
     const reply = result.response.text().trim();
 
     if (!reply) {
-      return NextResponse.json({ error: "El modelo no devolvió texto." }, { status: 502 });
+      return NextResponse.json({ error: copy.emptyModel }, { status: 502 });
     }
 
     return NextResponse.json({ reply });
   } catch (error) {
     console.error("chat", error instanceof Error ? error.message : "unknown");
     return NextResponse.json(
-      { error: "No se pudo consultar el modelo. Revisa AI_API_KEY y AI_MODEL." },
+      { error: copy.failed },
       { status: 502 },
     );
   }

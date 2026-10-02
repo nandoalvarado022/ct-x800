@@ -1,6 +1,10 @@
-import documentationJson from "@/data/documentation.json";
-import learningJson from "@/data/learning.json";
-import practiceJson from "@/data/practice.json";
+import documentationEn from "@/data/documentation.en.json";
+import documentationEs from "@/data/documentation.json";
+import learningEn from "@/data/learning.en.json";
+import learningEs from "@/data/learning.json";
+import practiceEn from "@/data/practice.en.json";
+import practiceEs from "@/data/practice.json";
+import type { Locale } from "@/lib/locale";
 import {
   DIFFICULTIES,
   type ContentItem,
@@ -93,42 +97,66 @@ function asPractice(value: unknown): PracticeExercise[] {
   return items;
 }
 
-export const documentation = asDocumentation(documentationJson);
-export const learning = asLearning(learningJson);
-export const practice = asPractice(practiceJson);
+const documentation = {
+  en: asDocumentation(documentationEn),
+  es: asDocumentation(documentationEs),
+} satisfies Record<Locale, DocumentationItem[]>;
 
-export function getDocumentation() {
-  return documentation;
+const learning = {
+  en: asLearning(learningEn),
+  es: asLearning(learningEs),
+} satisfies Record<Locale, LearningItem[]>;
+
+const practice = {
+  en: asPractice(practiceEn),
+  es: asPractice(practiceEs),
+} satisfies Record<Locale, PracticeExercise[]>;
+
+function assertSameSlugs(label: string, left: { slug: string }[], right: { slug: string }[]) {
+  const a = left.map((item) => item.slug).join("|");
+  const b = right.map((item) => item.slug).join("|");
+  if (a !== b) {
+    throw new Error(`Slugs distintos en ${label}`);
+  }
 }
 
-export function getLearning() {
-  return learning;
+assertSameSlugs("documentación", documentation.en, documentation.es);
+assertSameSlugs("aprendizaje", learning.en, learning.es);
+assertSameSlugs("práctica", practice.en, practice.es);
+
+export function getDocumentation(locale: Locale = "en") {
+  return documentation[locale];
 }
 
-export function getDocumentationBySlug(slug: string) {
-  return documentation.find((item) => item.slug === slug);
+export function getLearning(locale: Locale = "en") {
+  return learning[locale];
 }
 
-export function getLearningBySlug(slug: string) {
-  return learning.find((item) => item.slug === slug);
+export function getDocumentationBySlug(slug: string, locale: Locale = "en") {
+  return documentation[locale].find((item) => item.slug === slug);
 }
 
-export function getPractice() {
-  return practice;
+export function getLearningBySlug(slug: string, locale: Locale = "en") {
+  return learning[locale].find((item) => item.slug === slug);
 }
 
-export function getPracticeBySlug(slug: string) {
-  return practice.find((item) => item.slug === slug);
+export function getPractice(locale: Locale = "en") {
+  return practice[locale];
 }
 
-export function getNextPractice(slug: string) {
-  const index = practice.findIndex((item) => item.slug === slug);
+export function getPracticeBySlug(slug: string, locale: Locale = "en") {
+  return practice[locale].find((item) => item.slug === slug);
+}
+
+export function getNextPractice(slug: string, locale: Locale = "en") {
+  const items = practice[locale];
+  const index = items.findIndex((item) => item.slug === slug);
   if (index < 0) return undefined;
-  return practice[index + 1];
+  return items[index + 1];
 }
 
-export function getRelated(item: ContentItem, limit = 3) {
-  const pool = item.type === "documentation" ? documentation : learning;
+export function getRelated(item: ContentItem, locale: Locale = "en", limit = 3) {
+  const pool = item.type === "documentation" ? documentation[locale] : learning[locale];
 
   return pool
     .filter((candidate) => candidate.id !== item.id)
@@ -142,8 +170,9 @@ export function getRelated(item: ContentItem, limit = 3) {
     .map((entry) => entry.candidate);
 }
 
-export function getNextLearning(slug: string) {
-  const index = learning.findIndex((item) => item.slug === slug);
+export function getNextLearning(slug: string, locale: Locale = "en") {
+  const items = learning[locale];
+  const index = items.findIndex((item) => item.slug === slug);
   if (index < 0) return undefined;
-  return learning[index + 1];
+  return items[index + 1];
 }

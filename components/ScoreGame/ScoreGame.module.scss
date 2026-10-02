@@ -1,0 +1,273 @@
+.game {
+  position: relative;
+  max-width: 100%;
+  padding: 1.2rem 1.2rem 1.3rem;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(120, 170, 255, 0.1), transparent 34%),
+    var(--card);
+}
+
+.file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hud p,
+.result p,
+.ask,
+.song,
+.fileName {
+  margin: 0;
+}
+
+.hud p {
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.song {
+  margin-top: 0.75rem;
+  font-size: 1.15rem;
+  letter-spacing: -0.03em;
+}
+
+.fileName {
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.ask {
+  margin-top: 0.85rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.85rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.track select {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.7rem 0.8rem;
+  background: var(--input);
+  color: var(--text);
+}
+
+.staff {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  background: transparent;
+  color: #1a1028;
+}
+
+.score {
+  overflow-x: auto;
+  margin-top: 0.35rem;
+  border-radius: 22px;
+  background: #f7f1e8;
+}
+
+.hand {
+  margin: 0.95rem 0 0;
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.barNumber {
+  fill: #6d6458;
+  font-size: 15px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+.cipher {
+  fill: currentColor;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-sans), sans-serif;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.pager p {
+  margin: 0;
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.pager button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  background: var(--chip);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pager button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.staff line {
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+
+.staff .ledger {
+  stroke-width: 1.6;
+}
+
+.staff .stem {
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+
+.staff .flag {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.staff .head {
+  fill: currentColor;
+}
+
+.staff .open {
+  fill: #f7f1e8;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.staff .sharp {
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.waiting {
+  opacity: 0.72;
+}
+
+.printed {
+  color: #1a1028;
+}
+
+.current {
+  color: #c45a00;
+}
+
+.done {
+  color: #0d7a48;
+}
+
+.miss {
+  color: #b42318;
+}
+
+.feedback {
+  min-height: 1.5rem;
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.9rem;
+}
+
+.primary,
+.secondary {
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary {
+  border: 0;
+  background: var(--orange);
+  color: #1a0d00;
+}
+
+.secondary {
+  border: 1px solid var(--line);
+  background: var(--chip);
+  color: var(--text);
+}
+
+.primary:disabled,
+.secondary:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.result p {
+  color: var(--orange-2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.result strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: -0.04em;
+}
+
+.result span {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .primary,
+  .secondary {
+    width: 100%;
+  }
+}

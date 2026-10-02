@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useI18n } from "@/components/LocaleProvider/LocaleProvider";
 import { makeQuestion, ROUND_SIZE, type StaffQuestion } from "@/lib/staff-quiz";
 import styles from "./StaffQuiz.module.scss";
 
@@ -17,20 +18,14 @@ function noteY(step: number) {
   return BOTTOM - (step - 2) * (GAP / 2);
 }
 
-function resultLine(score: number) {
-  if (score === ROUND_SIZE) return "Las cinco quedaron en su sitio.";
-  if (score >= 3) return "Ya vas leyendo el pentagrama.";
-  return "Otra ronda y las posiciones se acomodan.";
-}
-
-function Staff({ step }: { step: number }) {
+function Staff({ step, label }: { step: number; label: string }) {
   const y = noteY(step);
   const stemUp = step < 6;
   const stemX = stemUp ? NOTE_X + 9 : NOTE_X - 9;
   const stemEnd = stemUp ? y - GAP * 3.15 : y + GAP * 3.15;
 
   return (
-    <svg className={styles.staff} viewBox="0 0 440 230" role="img" aria-label="Pentagrama en clave de sol">
+    <svg className={styles.staff} viewBox="0 0 440 230" role="img" aria-label={label}>
       {Array.from({ length: 5 }, (_, index) => {
         const lineY = BOTTOM - index * GAP;
         return <line key={lineY} x1="20" y1={lineY} x2="404" y2={lineY} />;
@@ -46,6 +41,7 @@ function Staff({ step }: { step: number }) {
 }
 
 export function StaffQuiz() {
+  const { m } = useI18n();
   const [question, setQuestion] = useState<StaffQuestion | null>(null);
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -66,23 +62,25 @@ export function StaffQuiz() {
 
   if (!question && !done) {
     return (
-      <section className={styles.game} aria-label="Posiciones en el pentagrama">
-        <p className={styles.pending}>Preparando la nota…</p>
+      <section className={styles.game} aria-label={m.quiz.label}>
+        <p className={styles.pending}>{m.quiz.preparing}</p>
       </section>
     );
   }
 
   if (done || !question) {
     return (
-      <section className={styles.game} aria-label="Posiciones en el pentagrama">
+      <section className={styles.game} aria-label={m.quiz.label}>
         <div className={styles.result}>
-          <p>Ronda lista</p>
+          <p>{m.quiz.roundReady}</p>
           <strong>
-            {score} de {ROUND_SIZE}
+            {score} {m.quiz.of} {ROUND_SIZE}
           </strong>
-          <span>{resultLine(score)}</span>
+          <span>
+            {score === ROUND_SIZE ? m.quiz.perfect : score >= 3 ? m.quiz.good : m.quiz.again}
+          </span>
           <button type="button" className={styles.next} onClick={startRound}>
-            Otra ronda
+            {m.quiz.another}
           </button>
         </div>
       </section>
@@ -110,23 +108,22 @@ export function StaffQuiz() {
     setPicked(null);
   }
 
-  let feedback = "Elige una de las tres notas.";
-  if (answered && correct) feedback = `Sí: es ${question.note.name}.`;
-  if (answered && !correct) feedback = `Era ${question.note.name}.`;
+  const answerName = m.quiz.notes[question.note.id] ?? question.note.name;
+  let feedback = m.quiz.choose;
+  if (answered && correct) feedback = m.quiz.yes(answerName);
+  if (answered && !correct) feedback = m.quiz.was(answerName);
 
   return (
-    <section className={styles.game} aria-label="Posiciones en el pentagrama">
+    <section className={styles.game} aria-label={m.quiz.label}>
       <div className={styles.hud}>
+        <p>{m.quiz.question(index + 1, ROUND_SIZE)}</p>
         <p>
-          Pregunta {index + 1} de {ROUND_SIZE}
-        </p>
-        <p>
-          {score} {score === 1 ? "acierto" : "aciertos"}
+          {score} {score === 1 ? m.quiz.hit : m.quiz.hits}
         </p>
       </div>
-      <p className={styles.ask}>¿Qué nota está dibujada?</p>
-      <Staff step={question.note.step} />
-      <div className={styles.options} role="group" aria-label="Opciones">
+      <p className={styles.ask}>{m.quiz.ask}</p>
+      <Staff step={question.note.step} label={m.quiz.staff} />
+      <div className={styles.options} role="group" aria-label={m.quiz.options}>
         {question.options.map((option) => {
           let state = "idle";
           if (answered && option.id === question.note.id) state = "correct";
@@ -141,7 +138,7 @@ export function StaffQuiz() {
               data-state={state}
               onClick={() => choose(option.id)}
             >
-              {option.name}
+              {m.quiz.notes[option.id] ?? option.name}
             </button>
           );
         })}
@@ -151,7 +148,7 @@ export function StaffQuiz() {
       </p>
       {answered ? (
         <button type="button" className={styles.next} onClick={advance}>
-          {index + 1 === ROUND_SIZE ? "Ver resultado" : "Siguiente"}
+          {index + 1 === ROUND_SIZE ? m.quiz.result : m.quiz.next}
         </button>
       ) : null}
     </section>

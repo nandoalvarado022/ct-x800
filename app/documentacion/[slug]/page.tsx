@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { EntryView } from "@/components/EntryView/EntryView";
 import { getDocumentation, getDocumentationBySlug, getRelated } from "@/lib/content";
+import { getLocale } from "@/lib/get-locale";
+import { messages } from "@/lib/messages";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -14,9 +16,10 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const locale = await getLocale();
   const { slug } = await params;
-  const item = getDocumentationBySlug(slug);
-  if (!item) return { title: "Ficha no encontrada" };
+  const item = getDocumentationBySlug(slug, locale);
+  if (!item) return { title: messages[locale].entry.missingDoc };
 
   return {
     title: item.title,
@@ -28,14 +31,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: item.title,
       description: item.description,
       url: `/documentacion/${item.slug}`,
+      locale: locale === "es" ? "es_ES" : "en_US",
     },
   };
 }
 
 export default async function DocumentacionEntryPage({ params }: PageProps) {
+  const locale = await getLocale();
   const { slug } = await params;
-  const item = getDocumentationBySlug(slug);
+  const item = getDocumentationBySlug(slug, locale);
   if (!item) notFound();
 
-  return <EntryView item={item} related={getRelated(item)} />;
+  return <EntryView item={item} related={getRelated(item, locale)} />;
 }

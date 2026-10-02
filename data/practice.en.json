@@ -1,0 +1,139 @@
+[
+  {
+    "id": "practice-manos-01",
+    "slug": "despierta-las-manos",
+    "title": "Wake up your hands",
+    "description": "Sit at the center, drop your shoulders, and rest five fingers. You do not need a song yet.",
+    "minutes": 2,
+    "xp": 20,
+    "intro": "This is the hello, not the piece. If your body is comfortable, whatever you play next comes out easier.",
+    "steps": [
+      {
+        "id": "centro",
+        "title": "Sit at the center",
+        "say": "Find the C that sits right in front of your navel. Bring the bench in until your elbows rest a little in front of your body, loose.",
+        "tip": "Both feet touch the floor. If your shoulders climb toward your ears, drop them before you go on.",
+        "cheer": "That is your spot. Playing is easier from here.",
+        "action": "I am at the center"
+      },
+      {
+        "id": "suelta",
+        "title": "Shake and let go",
+        "say": "Let your hands fall to your sides and shake them, as if you were drying water. Three times. Then rest them on your lap for a second.",
+        "tip": "Soft wrists matter more than speed. If they feel stiff, shake again.",
+        "cheer": "Light hands. They stay that way.",
+        "action": "I shook them"
+      },
+      {
+        "id": "derecha",
+        "title": "Land the right hand",
+        "say": "Thumb on C. The other fingers, in order, on D, E, F, and G. Do not press the keys down: only the weight of the hand, as if the keyboard were a warm table.",
+        "tip": "One finger per key. The elbow stays close to the body, without opening the wing.",
+        "cheer": "Five fingers, five keys. They have a map now.",
+        "action": "The right hand has landed",
+        "keys": [
+          { "note": "C", "finger": "1" },
+          { "note": "D", "finger": "2" },
+          { "note": "E", "finger": "3" },
+          { "note": "F", "finger": "4" },
+          { "note": "G", "finger": "5" }
+        ]
+      },
+      {
+        "id": "saludo",
+        "title": "Wave with each finger",
+        "say": "Without changing keys, lift and lower one finger at a time: thumb, index, middle, ring, and pinky. The others stay still.",
+        "tip": "If one finger drags its neighbor, stay with that finger only. One slow pass is enough.",
+        "cheer": "Each finger already knows its key.",
+        "action": "All five waved"
+      },
+      {
+        "id": "izquierda",
+        "title": "Now the left hand",
+        "say": "Move down one octave. The pinky goes on C and, toward the right, D, E, F, and G with the thumb. Rest them, then lift one finger at a time again.",
+        "tip": "The left hand feels odd at first. It is the first time: one pass is enough.",
+        "cheer": "Both hands are awake.",
+        "action": "The left hand too",
+        "keys": [
+          { "note": "C", "finger": "5" },
+          { "note": "D", "finger": "4" },
+          { "note": "E", "finger": "3" },
+          { "note": "F", "finger": "2" },
+          { "note": "G", "finger": "1" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "practice-camino-01",
+    "slug": "caminito-de-do",
+    "title": "The little path from C",
+    "description": "Five notes up and back, very slowly. The first sound of the day, with no song and no rush.",
+    "minutes": 3,
+    "xp": 30,
+    "intro": "One clean pass is worth several fast ones. Say “one” out loud every time a note sounds.",
+    "steps": [
+      {
+        "id": "piano",
+        "title": "A piano and a one",
+        "say": "Choose a piano tone. Say “one” out loud, calmly. That one is today’s pulse: every note lands on it.",
+        "tip": "If you prefer the CT-X800 metronome, leave it near 60. Your voice works too.",
+        "cheer": "You have a pulse. The notes walk on that one.",
+        "action": "I have the one"
+      },
+      {
+        "id": "sube",
+        "title": "Climb with the right hand",
+        "say": "Thumb on C. Play C, D, E, F, G. One note for each one. Release the key before you play the next.",
+        "tip": "If two keys sound at once, the finger was lying flat. Lift it a little and start again on C.",
+        "cheer": "You climbed the stairs. Five steps.",
+        "action": "I climbed to G",
+        "keys": [
+          { "note": "C", "finger": "1" },
+          { "note": "D", "finger": "2" },
+          { "note": "E", "finger": "3" },
+          { "note": "F", "finger": "4" },
+          { "note": "G", "finger": "5" }
+        ]
+      },
+      {
+        "id": "baja",
+        "title": "Come back the same way",
+        "say": "From G, return: G, F, E, D, C. The pinky starts and the thumb closes on C. Same one, same calm.",
+        "tip": "The final C can last a little longer. It is the period.",
+        "cheer": "There and back. That is already a phrase.",
+        "action": "I came back to C",
+        "keys": [
+          { "note": "G", "finger": "5" },
+          { "note": "F", "finger": "4" },
+          { "note": "E", "finger": "3" },
+          { "note": "D", "finger": "2" },
+          { "note": "C", "finger": "1" }
+        ]
+      },
+      {
+        "id": "izquierda",
+        "title": "The left hand copies the path",
+        "say": "Pinky on the lower C. Climb C, D, E, F, G and come back down. The thumb is the one that reaches G.",
+        "tip": "Slower than the right hand. If a finger sticks, stop and wave with that finger only.",
+        "cheer": "The left hand knows the path.",
+        "action": "The left hand made the trip",
+        "keys": [
+          { "note": "C", "finger": "5" },
+          { "note": "D", "finger": "4" },
+          { "note": "E", "finger": "3" },
+          { "note": "F", "finger": "2" },
+          { "note": "G", "finger": "1" }
+        ]
+      },
+      {
+        "id": "suave",
+        "title": "One softer pass",
+        "say": "Pick a hand, whichever you want. Repeat the whole path more softly, as if the keys were warm. One pass only.",
+        "tip": "If it feels heavy, do not repeat it ten times. Tomorrow this same pass will be easier.",
+        "cheer": "Round done. You can open a song now.",
+        "action": "The soft pass worked"
+      }
+    ]
+  }
+]

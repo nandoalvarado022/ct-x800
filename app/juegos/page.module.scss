@@ -1,0 +1,14 @@
+.more {
+  max-width: 40rem;
+  margin: 1.1rem 0 0;
+}
+
+.more a {
+  color: var(--orange-2);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.more a:hover {
+  text-decoration: underline;
+}

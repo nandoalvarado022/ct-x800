@@ -2,16 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useI18n } from "@/components/LocaleProvider/LocaleProvider";
 import { useProgress } from "@/components/ProgressProvider/ProgressProvider";
+import { RANKS } from "@/lib/progress";
 import styles from "./SiteHeader.module.scss";
-
-const links = [
-  { href: "/documentacion", label: "Documentación" },
-  { href: "/practica", label: "Práctica" },
-  { href: "/aprender", label: "Aprender" },
-  { href: "/juegos", label: "Juegos" },
-  { href: "/experto", label: "Experto" },
-];
 
 function Mark() {
   return (
@@ -37,9 +31,19 @@ function toggleTheme() {
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const { locale, setLocale, m } = useI18n();
   const { ready, xp, rank } = useProgress();
   const goal = rank.next?.min ?? rank.current.min;
   const shownMax = rank.next ? goal : Math.max(xp, 1);
+  const rankIndex = RANKS.findIndex((item) => item.min === rank.current.min);
+  const rankName = m.ranks[rankIndex] ?? rank.current.name;
+  const links = [
+    { href: "/documentacion", label: m.nav.docs },
+    { href: "/practica", label: m.nav.practice },
+    { href: "/aprender", label: m.nav.learn },
+    { href: "/juegos", label: m.nav.games },
+    { href: "/experto", label: m.nav.expert },
+  ];
 
   return (
     <header className={styles.bar}>
@@ -51,7 +55,7 @@ export function SiteHeader() {
             <small>CT-X800</small>
           </span>
         </Link>
-        <nav className={styles.nav} aria-label="Secciones">
+        <nav className={styles.nav} aria-label={m.nav.label}>
           {links.map((link) => {
             const current = pathname.startsWith(link.href);
             return (
@@ -65,12 +69,20 @@ export function SiteHeader() {
             );
           })}
         </nav>
+        <div className={styles.lang} role="group" aria-label={m.language}>
+          <button type="button" aria-pressed={locale === "en"} onClick={() => setLocale("en")}>
+            EN
+          </button>
+          <button type="button" aria-pressed={locale === "es"} onClick={() => setLocale("es")}>
+            ES
+          </button>
+        </div>
         <button type="button" className={styles.themeToggle} onClick={toggleTheme}>
-          <span className={styles.toLight}>Claro</span>
-          <span className={styles.toDark}>Oscuro</span>
+          <span className={styles.toLight}>{m.themeLight}</span>
+          <span className={styles.toDark}>{m.themeDark}</span>
         </button>
         <Link className={styles.rank} href="/aprender">
-          <span>{ready ? rank.current.name : "Progreso"}</span>
+          <span>{ready ? rankName : m.progress}</span>
           <strong>{ready ? `${xp} XP` : "—"}</strong>
           <span
             className={styles.meter}
@@ -78,7 +90,7 @@ export function SiteHeader() {
             aria-valuemin={0}
             aria-valuemax={shownMax}
             aria-valuenow={ready ? xp : 0}
-            aria-label={ready ? `Rango ${rank.current.name}` : "Progreso"}
+            aria-label={ready ? m.rankOf(rankName) : m.progress}
           >
             <span style={{ width: ready ? `${rank.ratio * 100}%` : "0%" }} />
           </span>

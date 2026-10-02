@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { useI18n } from "@/components/LocaleProvider/LocaleProvider";
 import { useProgress } from "@/components/ProgressProvider/ProgressProvider";
 import type { PracticeExercise, PracticeKey } from "@/lib/types";
 import styles from "./PracticeSession.module.scss";
@@ -12,10 +13,10 @@ type NextStop = {
   title: string;
 };
 
-function KeyLane({ keys }: { keys: PracticeKey[] }) {
+function KeyLane({ keys, notesLabel, legend }: { keys: PracticeKey[]; notesLabel: string; legend: string }) {
   return (
     <div className={styles.laneWrap}>
-      <ol className={styles.lane} aria-label="Notas de este paso">
+      <ol className={styles.lane} aria-label={notesLabel}>
         {keys.map((key) => (
           <li key={`${key.finger}-${key.note}`}>
             <span>{key.finger}</span>
@@ -23,7 +24,7 @@ function KeyLane({ keys }: { keys: PracticeKey[] }) {
           </li>
         ))}
       </ol>
-      <p className={styles.legend}>El 1 es el pulgar. El 5 es el meñique. Una tecla por dedo.</p>
+      <p className={styles.legend}>{legend}</p>
     </div>
   );
 }
@@ -37,6 +38,7 @@ export function PracticeSession({
   station: number;
   next: NextStop | null;
 }) {
+  const { m } = useI18n();
   const reduce = useReducedMotion();
   const { ready, isPracticeComplete, completePractice } = useProgress();
   const [index, setIndex] = useState(0);
@@ -84,13 +86,11 @@ export function PracticeSession({
   return (
     <section className={styles.session}>
       <Link className={styles.back} href="/practica">
-        Sala de calentamiento
+        {m.session.room}
       </Link>
 
       <header className={styles.header}>
-        <p>
-          Estación {String(station).padStart(2, "0")} · {exercise.minutes} min · {exercise.xp} XP
-        </p>
+        <p>{m.session.station(String(station).padStart(2, "0"), exercise.minutes, exercise.xp)}</p>
         <h1>{exercise.title}</h1>
         <p className={styles.intro}>{exercise.intro}</p>
       </header>
@@ -101,13 +101,13 @@ export function PracticeSession({
         aria-valuemin={0}
         aria-valuemax={total}
         aria-valuenow={finished ? total : index}
-        aria-label="Pasos de la estación"
+        aria-label={m.session.stepsLabel}
       >
         <span style={{ width: `${progress * 100}%` }} />
       </div>
 
       <div className={styles.cheerSlot} aria-live="polite">
-        {cheer ? <p>{index > 0 || finished ? `Racha ${finished ? total : index} · ${cheer}` : cheer}</p> : null}
+        {cheer ? <p>{index > 0 || finished ? m.session.streak(finished ? total : index, cheer) : cheer}</p> : null}
       </div>
 
       {finished ? (
@@ -133,25 +133,21 @@ export function PracticeSession({
                 ))}
               </span>
             ) : null}
-            <p>Estación despejada</p>
-            <strong>{earned ? `+${exercise.xp} XP` : "Esos XP ya están en tu rango"}</strong>
-            <span>
-              {earned
-                ? "Quedó guardado en la ronda. El medidor de arriba también se entera."
-                : "Otra vuelta sirve para soltar las manos. El rango se queda como está."}
-            </span>
+            <p>{m.session.cleared}</p>
+            <strong>{earned ? m.session.xpEarned(exercise.xp) : m.session.xpAlready}</strong>
+            <span>{earned ? m.session.saved : m.session.againHint}</span>
             <div className={styles.actions}>
               {next ? (
                 <Link className={styles.primary} href={`/practica/${next.slug}`}>
-                  Siguiente: {next.title}
+                  {m.session.next(next.title)}
                 </Link>
               ) : (
                 <Link className={styles.primary} href="/aprender">
-                  Ir a tocar una canción
+                  {m.session.goLearn}
                 </Link>
               )}
               <button type="button" onClick={replay}>
-                Otra vuelta
+                {m.session.another}
               </button>
             </div>
           </motion.div>
@@ -164,22 +160,24 @@ export function PracticeSession({
             transition={{ duration: 0.22 }}
           >
             <p className={styles.stepLabel}>
-              Paso {index + 1} de {total}
+              {m.session.stepOf(index + 1, total)}
             </p>
             <h2>{step.title}</h2>
             <p className={styles.say}>{step.say}</p>
             <p className={styles.tip}>
-              <span>Si te trabas</span>
+              <span>{m.session.stuck}</span>
               {step.tip}
             </p>
-            {step.keys && step.keys.length > 0 ? <KeyLane keys={step.keys} /> : null}
+            {step.keys && step.keys.length > 0 ? (
+              <KeyLane keys={step.keys} notesLabel={m.session.notesLabel} legend={m.session.legend} />
+            ) : null}
             <div className={styles.actions}>
               <button type="button" className={styles.primary} onClick={advance} disabled={!ready}>
-                {ready ? step.action : "Cargando…"}
+                {ready ? step.action : m.session.loading}
               </button>
               {index > 0 ? (
                 <button type="button" onClick={back}>
-                  Paso anterior
+                  {m.session.back}
                 </button>
               ) : null}
             </div>

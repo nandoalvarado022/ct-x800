@@ -2,13 +2,17 @@ import Link from "next/link";
 import { HomeHero } from "@/components/HomeHero/HomeHero";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { getDocumentation, getLearning, getPractice } from "@/lib/content";
-import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
+import { getLocale } from "@/lib/get-locale";
+import { messages } from "@/lib/messages";
+import { getSiteUrl } from "@/lib/site";
 import styles from "./page.module.scss";
 
-export default function HomePage() {
-  const docs = getDocumentation();
-  const lessons = getLearning();
-  const warmups = getPractice();
+export default async function HomePage() {
+  const locale = await getLocale();
+  const copy = messages[locale];
+  const docs = getDocumentation(locale);
+  const lessons = getLearning(locale);
+  const warmups = getPractice(locale);
 
   return (
     <>
@@ -16,46 +20,44 @@ export default function HomePage() {
         data={{
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: siteName,
-          description: siteDescription,
-          inLanguage: "es",
+          name: copy.meta.siteName,
+          description: copy.meta.description,
+          inLanguage: locale,
           url: getSiteUrl(),
           about: {
             "@type": "Product",
             name: "Casio CT-X800",
             brand: { "@type": "Brand", name: "Casio" },
-            category: "Teclado musical",
+            category: copy.home.category,
           },
         }}
       />
       <HomeHero />
-      <section className={styles.portals} aria-label="Módulos">
+      <section className={styles.portals} aria-label={copy.home.modules}>
         <Link className={styles.doc} href="/documentacion">
-          <span>Módulo</span>
-          <strong>Documentación</strong>
-          <p>{docs.length} fichas de configuración: pedal, split, USB-MIDI, efectos y alimentación.</p>
+          <span>{copy.home.module}</span>
+          <strong>{copy.home.docsTitle}</strong>
+          <p>{copy.home.docsBody(docs.length)}</p>
         </Link>
         <Link className={styles.practice} href="/practica">
-          <span>Módulo</span>
-          <strong>Práctica</strong>
-          <p>
-            {warmups.length} calentamientos cortos, con pasos y XP, antes de abrir una canción.
-          </p>
+          <span>{copy.home.module}</span>
+          <strong>{copy.home.practiceTitle}</strong>
+          <p>{copy.home.practiceBody(warmups.length)}</p>
         </Link>
         <Link className={styles.learn} href="/aprender">
-          <span>Módulo</span>
-          <strong>Aprendizaje</strong>
-          <p>{lessons.length} prácticas con XP: Step Up, banco de 160 y canciones MIDI.</p>
+          <span>{copy.home.module}</span>
+          <strong>{copy.home.learnTitle}</strong>
+          <p>{copy.home.learnBody(lessons.length)}</p>
         </Link>
         <Link className={styles.games} href="/juegos">
-          <span>Módulo</span>
-          <strong>Juegos</strong>
-          <p>Un mini juego para ubicar Do, Re, Mi y el resto de la escala en el pentagrama.</p>
+          <span>{copy.home.module}</span>
+          <strong>{copy.home.gamesTitle}</strong>
+          <p>{copy.home.gamesBody}</p>
         </Link>
       </section>
       <section className={styles.split}>
         <div>
-          <h2>Empieza por el manual</h2>
+          <h2>{copy.home.startManual}</h2>
           <ul>
             {docs.slice(0, 4).map((item) => (
               <li key={item.id}>
@@ -68,14 +70,14 @@ export default function HomePage() {
           </ul>
         </div>
         <div>
-          <h2>Ruta de práctica</h2>
+          <h2>{copy.home.practicePath}</h2>
           <ol>
             {lessons.slice(0, 4).map((item) => (
               <li key={item.id}>
                 <Link href={`/aprender/${item.slug}`}>
                   <strong>{item.title}</strong>
                   <span>
-                    {item.difficulty} · {item.description}
+                    {copy.difficulty[item.difficulty]} · {item.description}
                   </span>
                 </Link>
               </li>
@@ -85,10 +87,10 @@ export default function HomePage() {
       </section>
       <section className={styles.expert}>
         <div>
-          <p>Pregúntale al experto</p>
-          <h2>Una duda concreta, una respuesta del CT-X800.</h2>
+          <p>{copy.home.expertKicker}</p>
+          <h2>{copy.home.expertTitle}</h2>
         </div>
-        <Link href="/experto">Abrir el chat</Link>
+        <Link href="/experto">{copy.home.openChat}</Link>
       </section>
     </>
   );

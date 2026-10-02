@@ -8,11 +8,13 @@ import {
   useMemo,
   useState,
 } from "react";
-import { learning, practice } from "@/lib/content";
+import { getLearning, getPractice } from "@/lib/content";
 import { rankForXp, xpForDifficulty } from "@/lib/progress";
 
 const STORAGE_KEY = "ctx800-mastery";
 const PRACTICE_KEY = "ctx800-practice";
+const learning = getLearning("en");
+const practice = getPractice("en");
 
 type ProgressValue = {
   ready: boolean;

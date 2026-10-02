@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/practica", priority: 0.9 },
     { path: "/aprender", priority: 0.9 },
     { path: "/juegos", priority: 0.9 },
+    { path: "/juegos/partitura", priority: 0.8 },
     { path: "/experto", priority: 0.7 },
     ...getPractice().map((item) => ({
       path: `/practica/${item.slug}`,

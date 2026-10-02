@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/PageIntro/PageIntro";
-import { StaffQuiz } from "@/components/StaffQuiz/StaffQuiz";
+import { ScoreGame } from "@/components/ScoreGame/ScoreGame";
 import { getLocale } from "@/lib/get-locale";
 import { messages, pageMeta } from "@/lib/messages";
 import styles from "./page.module.scss";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return pageMeta(await getLocale(), "games", "/juegos");
+  return pageMeta(await getLocale(), "score", "/juegos/partitura");
 }
 
-export default async function JuegosPage() {
+export default async function PartituraPage() {
   const locale = await getLocale();
-  const copy = messages[locale].pages.games;
+  const copy = messages[locale].pages.score;
 
   return (
     <>
       <PageIntro kicker={copy.kicker} title={copy.heading} lede={copy.lede} />
-      <StaffQuiz />
-      <p className={styles.more}>
-        <Link href="/juegos/partitura">{copy.more}</Link>
+      <ScoreGame />
+      <p className={styles.back}>
+        <Link href="/juegos">{copy.back}</Link>
       </p>
     </>
   );

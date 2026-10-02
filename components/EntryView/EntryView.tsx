@@ -2,6 +2,8 @@ import Link from "next/link";
 import { CompleteLesson } from "@/components/CompleteLesson/CompleteLesson";
 import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { Markdown } from "@/components/Markdown/Markdown";
+import { getLocale } from "@/lib/get-locale";
+import { messages } from "@/lib/messages";
 import { xpForDifficulty } from "@/lib/progress";
 import { getSiteUrl } from "@/lib/site";
 import type { ContentItem, LearningItem } from "@/lib/types";
@@ -13,9 +15,11 @@ type EntryViewProps = {
   nextLesson?: LearningItem;
 };
 
-export function EntryView({ item, related, nextLesson }: EntryViewProps) {
+export async function EntryView({ item, related, nextLesson }: EntryViewProps) {
+  const locale = await getLocale();
+  const copy = messages[locale];
   const base = item.type === "documentation" ? "/documentacion" : "/aprender";
-  const sectionLabel = item.type === "documentation" ? "Documentación" : "Aprendizaje";
+  const sectionLabel = item.type === "documentation" ? copy.entry.docs : copy.entry.learn;
   const url = `${getSiteUrl()}${base}/${item.slug}`;
 
   const jsonLd: Record<string, unknown> = {
@@ -25,7 +29,7 @@ export function EntryView({ item, related, nextLesson }: EntryViewProps) {
     name: item.title,
     description: item.description,
     keywords: item.tags.join(", "),
-    inLanguage: "es",
+    inLanguage: locale,
     url,
     about: {
       "@type": "Product",
@@ -36,14 +40,14 @@ export function EntryView({ item, related, nextLesson }: EntryViewProps) {
 
   if (item.type === "learning") {
     jsonLd.learningResourceType = "tutorial";
-    jsonLd.educationalLevel = item.difficulty;
+    jsonLd.educationalLevel = copy.difficulty[item.difficulty];
   }
 
   return (
     <article className={styles.article}>
       <JsonLd data={jsonLd} />
-      <nav className={styles.crumb} aria-label="Miga de pan">
-        <Link href="/">Inicio</Link>
+      <nav className={styles.crumb} aria-label={copy.entry.crumb}>
+        <Link href="/">{copy.entry.home}</Link>
         <span aria-hidden="true">/</span>
         <Link href={base}>{sectionLabel}</Link>
       </nav>
@@ -54,7 +58,7 @@ export function EntryView({ item, related, nextLesson }: EntryViewProps) {
         <ul className={styles.tags}>
           {item.type === "learning" ? (
             <li>
-              {item.difficulty} · {xpForDifficulty(item.difficulty)} XP
+              {copy.difficulty[item.difficulty]} · {xpForDifficulty(item.difficulty)} XP
             </li>
           ) : null}
           {item.tags.map((tag) => (
@@ -67,13 +71,13 @@ export function EntryView({ item, related, nextLesson }: EntryViewProps) {
       {nextLesson ? (
         <p className={styles.next}>
           <Link href={`/aprender/${nextLesson.slug}`}>
-            Siguiente práctica: {nextLesson.title}
+            {copy.entry.next(nextLesson.title)}
           </Link>
         </p>
       ) : null}
       {related.length > 0 ? (
         <aside className={styles.related}>
-          <h2>Sigue por aquí</h2>
+          <h2>{copy.entry.related}</h2>
           <ul>
             {related.map((entry) => (
               <li key={entry.id}>

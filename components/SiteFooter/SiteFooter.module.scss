@@ -29,3 +29,18 @@
   color: var(--muted);
   text-decoration: none;
 }
+
+.credit {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.credit strong {
+  color: var(--text);
+  font-weight: 700;
+}

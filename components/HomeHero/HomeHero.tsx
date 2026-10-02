@@ -3,22 +3,17 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { useI18n } from "@/components/LocaleProvider/LocaleProvider";
 import styles from "./HomeHero.module.scss";
 
 const WHITE_COUNT = 14;
 const BLACK_AFTER = [0, 1, 3, 4, 5, 7, 8, 10, 11, 12];
 const PHRASE = [0, 1, 2, 0, 0, 1, 2, 0, 2, 3, 4, 4];
 
-const specs = [
-  { value: "61", label: "teclas" },
-  { value: "600", label: "tonos AiX" },
-  { value: "195", label: "ritmos" },
-  { value: "160", label: "canciones" },
-  { value: "48", label: "voces" },
-];
-
 export function HomeHero() {
+  const { m } = useI18n();
   const reduce = useReducedMotion();
+  const specs = m.hero.specs;
   const [step, setStep] = useState(0);
 
   useEffect(() => {
@@ -35,18 +30,15 @@ export function HomeHero() {
   return (
     <section className={styles.hero}>
       <div>
-        <p className={styles.kicker}>Fuente de la verdad</p>
-        <h1>Todo el CT-X800, en un solo sitio.</h1>
-        <p className={styles.lede}>
-          Configura el pedal, recorre las lecciones Step Up y lleva tus MIDI al
-          teclado. Cada ficha sale de la especificación publicada del instrumento.
-        </p>
+        <p className={styles.kicker}>{m.hero.kicker}</p>
+        <h1>{m.hero.title}</h1>
+        <p className={styles.lede}>{m.hero.lede}</p>
         <div className={styles.actions}>
           <Link className={styles.primary} href="/documentacion">
-            Abrir documentación
+            {m.hero.docs}
           </Link>
           <Link className={styles.secondary} href="/practica">
-            Calentar las manos
+            {m.hero.warmup}
           </Link>
         </div>
       </div>

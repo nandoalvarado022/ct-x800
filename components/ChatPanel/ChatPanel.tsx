@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useRef, useState } from "react";
+import { useI18n } from "@/components/LocaleProvider/LocaleProvider";
 import styles from "./ChatPanel.module.scss";
 
 type Role = "user" | "expert";
@@ -11,21 +12,11 @@ type ChatMessage = {
   text: string;
 };
 
-const suggestions = [
-  "¿Cómo asigno el pedal a sostenuto?",
-  "¿Qué MIDI puedo cargar en el CT-X800?",
-  "¿En qué se diferencian Listen, Watch y Remember?",
-  "¿Por qué oigo las notas dos veces con el DAW?",
-];
-
-const greeting: ChatMessage = {
-  id: "greeting",
-  role: "expert",
-  text: "Pregúntame por el pedal, las lecciones Step Up, el banco de 160 canciones o cómo llevar un MIDI al CT-X800. Respondo solo sobre este teclado.",
-};
-
 export function ChatPanel() {
-  const [messages, setMessages] = useState<ChatMessage[]>([greeting]);
+  const { locale, m } = useI18n();
+  const [messages, setMessages] = useState<ChatMessage[]>([
+    { id: "greeting", role: "expert", text: m.chat.greeting },
+  ]);
   const [draft, setDraft] = useState("");
   const [pending, setPending] = useState(false);
   const [error, setError] = useState("");
@@ -54,18 +45,18 @@ export function ChatPanel() {
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: question, history }),
+        body: JSON.stringify({ message: question, history, locale }),
       });
       const data = (await response.json()) as { reply?: string; error?: string };
       if (!response.ok || !data.reply) {
-        throw new Error(data.error || "No hubo respuesta.");
+        throw new Error(data.error || m.chat.noReply);
       }
       setMessages((current) => [
         ...current,
         { id: crypto.randomUUID(), role: "expert", text: data.reply as string },
       ]);
     } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "No hubo respuesta.");
+      setError(caught instanceof Error ? caught.message : m.chat.noReply);
     } finally {
       setPending(false);
       listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
@@ -78,19 +69,19 @@ export function ChatPanel() {
   }
 
   return (
-    <section className={styles.panel} aria-label="Chat con el experto">
+    <section className={styles.panel} aria-label={m.chat.label}>
       <div className={styles.list} ref={listRef} aria-live="polite">
         {messages.map((message) => (
           <article key={message.id} className={message.role === "user" ? styles.user : styles.expert}>
-            <p>{message.role === "user" ? "Tú" : "Experto"}</p>
+            <p>{message.role === "user" ? m.chat.you : m.chat.expert}</p>
             <div>{message.text}</div>
           </article>
         ))}
-        {pending ? <p className={styles.pending}>El experto está pensando…</p> : null}
+        {pending ? <p className={styles.pending}>{m.chat.thinking}</p> : null}
       </div>
       {error ? <p className={styles.error}>{error}</p> : null}
       <div className={styles.suggestions}>
-        {suggestions.map((suggestion) => (
+        {m.chat.suggestions.map((suggestion) => (
           <button key={suggestion} type="button" onClick={() => void ask(suggestion)} disabled={pending}>
             {suggestion}
           </button>
@@ -98,14 +89,14 @@ export function ChatPanel() {
       </div>
       <form className={styles.form} onSubmit={onSubmit}>
         <label className={styles.sr} htmlFor="expert-question">
-          Tu pregunta sobre el CT-X800
+          {m.chat.questionLabel}
         </label>
         <textarea
           id="expert-question"
           value={draft}
           rows={3}
           maxLength={2000}
-          placeholder="Escribe la duda concreta…"
+          placeholder={m.chat.placeholder}
           onChange={(event) => setDraft(event.target.value)}
           onKeyDown={(event) => {
             if (event.key === "Enter" && !event.shiftKey) {
@@ -115,10 +106,10 @@ export function ChatPanel() {
           }}
         />
         <button type="submit" disabled={pending || draft.trim().length === 0}>
-          {pending ? "Enviando" : "Preguntar"}
+          {pending ? m.chat.sending : m.chat.ask}
         </button>
       </form>
-      <p className={styles.hint}>Enter envía. Mayús+Enter baja de línea.</p>
+      <p className={styles.hint}>{m.chat.hint}</p>
     </section>
   );
 }

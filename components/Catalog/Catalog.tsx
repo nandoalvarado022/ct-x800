@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { useI18n } from "@/components/LocaleProvider/LocaleProvider";
 import { useProgress } from "@/components/ProgressProvider/ProgressProvider";
-import { matchesQuery } from "@/lib/search";
+import { matchesQuery, normalizeText } from "@/lib/search";
 import { xpForDifficulty } from "@/lib/progress";
 import type { ContentItem, Difficulty } from "@/lib/types";
 import styles from "./Catalog.module.scss";
@@ -22,6 +23,7 @@ const difficultyStyle: Record<Difficulty, string> = {
 };
 
 export function Catalog({ items, basePath, variant }: CatalogProps) {
+  const { m } = useI18n();
   const inputId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
   const reduce = useReducedMotion();
@@ -84,7 +86,7 @@ export function Catalog({ items, basePath, variant }: CatalogProps) {
     <section className={styles.catalog}>
       <div className={styles.tools}>
         <label className={styles.label} htmlFor={inputId}>
-          Buscar en título, descripción y etiquetas
+          {m.catalog.searchLabel}
         </label>
         <div className={styles.field}>
           <input
@@ -92,13 +94,13 @@ export function Catalog({ items, basePath, variant }: CatalogProps) {
             id={inputId}
             value={query}
             onChange={(event) => updateQuery(event.target.value)}
-            placeholder="Pedal, MIDI, acordes…"
+            placeholder={m.catalog.placeholder}
             autoComplete="off"
             enterKeyHint="search"
           />
           {query ? (
             <button type="button" onClick={() => updateQuery("")}>
-              Limpiar
+              {m.catalog.clear}
             </button>
           ) : (
             <kbd>/</kbd>
@@ -106,7 +108,7 @@ export function Catalog({ items, basePath, variant }: CatalogProps) {
         </div>
         <div className={styles.tags}>
           {tags.map((tag) => {
-            const pressed = query.toLocaleLowerCase("es") === tag.toLocaleLowerCase("es");
+            const pressed = normalizeText(query) === normalizeText(tag);
             return (
               <button
                 key={tag}
@@ -120,16 +122,14 @@ export function Catalog({ items, basePath, variant }: CatalogProps) {
           })}
         </div>
         <p className={styles.live} aria-live="polite">
-          {visible.length} {visible.length === 1 ? "resultado" : "resultados"}
-          {variant === "learning" && progress.ready
-            ? ` · ${done} de ${items.length} prácticas hechas`
-            : ""}
+          {visible.length} {visible.length === 1 ? m.catalog.result : m.catalog.results}
+          {variant === "learning" && progress.ready ? m.catalog.doneOf(done, items.length) : ""}
         </p>
       </div>
 
       {visible.length === 0 ? (
         <p className={styles.empty}>
-          Nada coincide con «{query}». Prueba con una etiqueta o con una palabra del título.
+          {m.catalog.empty(query)}
         </p>
       ) : (
         <ul className={variant === "learning" ? styles.path : styles.grid}>
@@ -151,7 +151,7 @@ export function Catalog({ items, basePath, variant }: CatalogProps) {
                         </span>
                         {item.type === "learning" ? (
                           <span className={difficultyStyle[item.difficulty]}>
-                            {item.difficulty}
+                            {m.difficulty[item.difficulty]}
                           </span>
                         ) : null}
                         {item.type === "learning" ? (
@@ -159,7 +159,7 @@ export function Catalog({ items, basePath, variant }: CatalogProps) {
                             {xpForDifficulty(item.difficulty)} XP
                           </span>
                         ) : null}
-                        {complete ? <span className={styles.done}>Hecha</span> : null}
+                        {complete ? <span className={styles.done}>{m.catalog.done}</span> : null}
                       </>
                     ) : (
                       <span>{item.tags[0]}</span>
@@ -167,7 +167,7 @@ export function Catalog({ items, basePath, variant }: CatalogProps) {
                   </span>
                   <h2>{item.title}</h2>
                   <p>{item.description}</p>
-                  <span className={styles.more}>Abrir ficha</span>
+                  <span className={styles.more}>{m.catalog.open}</span>
                 </Link>
               </motion.li>
             );

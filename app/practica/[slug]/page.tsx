@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PracticeSession } from "@/components/PracticeSession/PracticeSession";
 import { getNextPractice, getPractice, getPracticeBySlug } from "@/lib/content";
+import { getLocale } from "@/lib/get-locale";
+import { messages } from "@/lib/messages";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -14,9 +16,10 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const locale = await getLocale();
   const { slug } = await params;
-  const item = getPracticeBySlug(slug);
-  if (!item) return { title: "Ejercicio no encontrado" };
+  const item = getPracticeBySlug(slug, locale);
+  if (!item) return { title: messages[locale].entry.missingExercise };
 
   return {
     title: item.title,
@@ -26,17 +29,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: item.title,
       description: item.description,
       url: `/practica/${item.slug}`,
+      locale: locale === "es" ? "es_ES" : "en_US",
     },
   };
 }
 
 export default async function PracticaEntryPage({ params }: PageProps) {
+  const locale = await getLocale();
   const { slug } = await params;
-  const item = getPracticeBySlug(slug);
+  const item = getPracticeBySlug(slug, locale);
   if (!item) notFound();
 
-  const next = getNextPractice(item.slug);
-  const station = getPractice().findIndex((entry) => entry.slug === item.slug) + 1;
+  const next = getNextPractice(item.slug, locale);
+  const station = getPractice(locale).findIndex((entry) => entry.slug === item.slug) + 1;
 
   return (
     <PracticeSession

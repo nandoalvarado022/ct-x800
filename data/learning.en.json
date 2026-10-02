@@ -1,0 +1,92 @@
+[
+  {
+    "id": "learn-step-01",
+    "type": "learning",
+    "title": "The three Step Up lessons",
+    "slug": "lecciones-step-up",
+    "description": "Listen, watch, and remember: the path the CT-X800 uses to teach each phrase of a song.",
+    "tags": ["lesson", "step up", "songs", "practice"],
+    "difficulty": "fácil",
+    "content": "Step Up splits a song into short phrases. It does not ask for the whole piece on day one. The three lessons are called **Listen**, **Watch**, and **Remember**. There is also an **Easy Mode** when the full fingering still gets in the way.\n\nThis practice uses any song from the bank. Pick a slow one.\n\n## Step 1. Listen\n\n1. Press **SONG BANK** and choose one of the **160** songs, or the demo.\n2. Enter **LESSON** and select lesson 1, Listen.\n3. Press **START/STOP**. You do not play. Watch the staff, the measure number, and the chord name.\n4. Repeat the same phrase until you can hum it. The repeat function keeps you from going back to the start of the song.\n\n## Step 2. Watch\n\n1. Move to lesson 2, Watch.\n2. The keyboard waits for your notes and guides you. The **voice fingering guide** and the **note guide** show the finger and the key.\n3. Play slowly. If you fall behind, the lesson holds you: do not push the tempo to “win”.\n4. When the phrase comes out without looking at your fingers on the screen, you are ready for the third lesson.\n\n## Step 3. Remember\n\n1. Enter lesson 3, Remember.\n2. The guide steps back. Play the phrase from memory, in time.\n3. When you finish, the **evaluation** scores the performance. A right note at the wrong time still counts. Go back to Watch only for the measure that failed, not for the whole song.\n\nEasy Mode lowers what the part demands. Use it to learn the map of the phrase, and turn it off as soon as both hands know where they land.\n\nWhen you close the lesson, the bank stays on the song you chose. Write down its number: tomorrow you will not have to search for it by name."
+  },
+  {
+    "id": "learn-partes-01",
+    "type": "learning",
+    "title": "Practice one hand at a time",
+    "slug": "practicar-por-manos",
+    "description": "Mute the right hand, the left hand, or leave both, and study each part with the lesson.",
+    "tags": ["lesson", "hands", "parts", "practice"],
+    "difficulty": "fácil",
+    "content": "Each song in the bank can be studied with the **right-hand** part, the **left-hand** part, or **both**. The CT-X800 calls that choice Part Select: R, L, or LR. The music information screen shows staff, fingering, pedal, tempo, time signature, and chord.\n\n## The right hand alone\n\n1. Choose the song and open the lesson.\n2. Select part **R**.\n3. The keyboard plays the accompaniment and silences the melody, which is now yours.\n4. Go through Listen and Watch with that hand only. Do not add the left “just to try”.\n\n## The left hand alone\n\n1. Switch to part **L**.\n2. Many bank songs use bass and chords there, not a second melody. Read the chord name on the screen before you look for the shape.\n3. If the left hand crosses the right, you are out of your zone: look again at where each part lives on the staff.\n\n## Both hands\n\n1. Move to **LR** only when each hand can hold its Watch lesson without stopping the tempo.\n2. Lower the metronome or song tempo. Raising it is the last step, not the first.\n3. Four clean measures are worth more than the whole song in stumbles. Use phrase repeat.\n\nEvaluation with both hands is stricter because a miss in either one lowers the result. If the score drops, do not change songs: find which hand arrived late."
+  },
+  {
+    "id": "learn-banco-01",
+    "type": "learning",
+    "title": "Walk through the 160-song bank",
+    "slug": "banco-de-canciones",
+    "description": "Pick a built-in song, read it on the screen, and decide whether today is for listening or studying.",
+    "tags": ["songs", "song bank", "repertoire", "practice"],
+    "difficulty": "fácil",
+    "content": "The bank includes **1 demonstration song** and **160 songs** to study. They do not use the 10 user slots. They are there to learn styles and to feed the Step Up lessons.\n\n## Choose and listen\n\n1. Press **SONG BANK**.\n2. Turn the dial or use numeric selection until you see the number and the name on the LCD.\n3. Press **START/STOP**. Watch the tempo, the time signature, and the chord at the same time: that screen is part of the practice, not decoration.\n4. To repeat a section, set an A-B repeat if the song lets you mark the passage, or use the lesson phrase.\n\n## Decide today’s work\n\nListen once and write down three things on paper or on your phone:\n\n- the song number\n- the tempo shown on the screen\n- which hand feels unfamiliar\n\nThat song is the song of the week. Changing pieces every ten minutes keeps Remember from scoring you fairly.\n\n## What is not in the bank\n\nA song you brought in as MIDI does not appear among the 160. It lives on the USB memory or in a user slot. If START/STOP starts a factory piece and you were looking for your file, you are in the internal bank: switch to the USB source or to the user number where you loaded it.\n\nThe demo button plays the instrument’s demonstration piece. It does not erase your registration or your user song, but it does take the audio. Stop it before you keep studying."
+  },
+  {
+    "id": "learn-do-01",
+    "type": "learning",
+    "title": "A C-major phrase with the right hand",
+    "slug": "frase-en-do-mayor",
+    "description": "Four measures to settle fingering, touch, and the metronome before you open a song from the bank.",
+    "tags": ["practice", "fingering", "right hand", "metronome"],
+    "difficulty": "fácil",
+    "content": "This phrase is a study exercise, not a song from the bank. It is there so fingers 1, 2, and 3 of the right hand obey the metronome before you ask Step Up for a whole piece.\n\nChoose a piano tone. Leave touch at a medium level. Tempo **72**. A meter of **4** beats.\n\n## The notes\n\nEach syllable is a quarter note, except the final rest of each third group. Fingering is in parentheses.\n\n1. C (1) D (2) E (3) C (1)\n2. C (1) D (2) E (3) C (1)\n3. E (3) F (4) G (5), and a rest\n4. E (3) F (4) G (5), and a rest\n\nStay in one octave, the one that falls in front of your body, without opening the elbow.\n\n## How to study it\n\n1. Turn the metronome on at 72.\n2. Say the note names out loud while you play, one per click.\n3. Repeat the first two measures until the thumb returns to C without looking.\n4. Add measures 3 and 4. The rest is counted too: do not rush the E.\n5. Go up to 84 only when four passes in a row come out without hitting a neighboring key.\n\n## What to listen for\n\nWith touch on, the first note of each measure can be a little deeper and the others lighter. If they all sound equally loud, you are not using the sensitivity: check that Touch is not off.\n\nWhen this phrase is boring because it is easy, open the bank and use the same rule: time first, speed later."
+  },
+  {
+    "id": "learn-midi-01",
+    "type": "learning",
+    "title": "Import a MIDI song",
+    "slug": "importar-cancion-midi",
+    "description": "Copy an SMF to FAT32 memory and load it into one of the 10 user slots on the CT-X800.",
+    "tags": ["midi", "usb", "import", "songs", "smf"],
+    "difficulty": "medio",
+    "content": "This practice puts a new song inside the keyboard, in one of the **10** user slots. The file has to be an **SMF format 0 or 1**, extension **.MID**, about **320 KB** at most. Format 2 does not work.\n\nYou need a USB drive and a computer. The correct port on the keyboard is **Type A**. Type B is only for MIDI with the computer and does not read files.\n\n## Step 1. Prepare the drive\n\n1. Insert the drive in the USB Type A port of the CT-X800.\n2. Open it in the USB operations menu and **format it** if this is the first time this keyboard uses it. Accept the warning: formatting erases the drive.\n3. When the screen finishes, remove the drive while the unit is idle, not in the middle of a working message.\n\n## Step 2. Copy the file\n\n1. Connect the drive to the computer.\n2. Copy the `.mid` to the drive. Avoid huge names and unusual characters if the LCD will not show them well later: `study-01.mid` is enough.\n3. Eject the drive from the operating system.\n4. If the file is larger than about 320 KB, open it in a MIDI editor, delete empty tracks and data you do not use, and export again in format 0 or 1.\n\n## Step 3. Load it into a user slot\n\n1. Insert the drive in Type A again and wait for the keyboard to mount it.\n2. Enter the USB operations and choose **Load** for **Song**.\n3. Point to the file.\n4. Choose the destination user number, from 1 to 10. If that number already had something, the load replaces it.\n5. Confirm and wait until the working message disappears. Do not press other buttons meanwhile.\n\n## Step 4. Check\n\n1. Remove the drive.\n2. Find the user song you chose and press **START/STOP**.\n3. It has to sound the same, with the drive unplugged. If it only sounds with the drive connected, you did a direct playback and not a load. Repeat step 3.\n\nStep Up lessons are built for the internal bank. Study your loaded MIDI with the metronome, hands separate, lowering the tempo on the computer first if you need to before you export."
+  },
+  {
+    "id": "learn-smf-01",
+    "type": "learning",
+    "title": "Play an SMF from USB memory",
+    "slug": "reproducir-smf-desde-usb",
+    "description": "Listen to a MIDI file without using an internal slot: direct playback on the CT-X800.",
+    "tags": ["midi", "usb", "smf", "playback"],
+    "difficulty": "medio",
+    "content": "Direct playback is for trying a file before you decide whether it deserves one of the 10 user slots. The SMF plays from the drive. If you remove the drive, the song is not inside the keyboard.\n\nThe same kind of file works: **format 0 or 1**, extension **.MID**, on a **FAT32** drive.\n\n## Try the file\n\n1. Copy the MIDI onto the drive, as in the import lesson. You do not need to format it if this drive already works with the CT-X800.\n2. Insert the drive in the **Type A** port.\n3. Enter the song bank and switch the source to **USB memory**, not the bank of 160.\n4. Turn the dial until you see your file.\n5. Press **START/STOP**.\n\n## What to check while it plays\n\n- If the tempo runs away, the file brings its own tempo. Change it on the computer and copy it again, or leave it and practice on top at a tempo you can hold.\n- If an instrument is missing, that channel may point to a GM program that the CT-X800 replaces with the nearest GM tone. That is normal in General MIDI playback.\n- If the screen complains about the file, it is almost always format 2, a type that is not SMF, or a size that is too large. Export again.\n\n## From the test to internal memory\n\nWhen the file convinces you, load it with Load into a user slot. Until then, do not spend those 10 slots on tests. You can delete discarded MIDI files from the USB drive, from the keyboard menu, so the dial does not fill up with `final-final2` versions."
+  },
+  {
+    "id": "learn-rec-01",
+    "type": "learning",
+    "title": "Record on six tracks",
+    "slug": "grabador-de-seis-pistas",
+    "description": "Capture an idea on the MIDI recorder: 6 tracks, 5 songs, and about 40,000 notes.",
+    "tags": ["recorder", "tracks", "midi", "composition"],
+    "difficulty": "avanzado",
+    "content": "The CT-X800 recorder is MIDI, in real time. It offers **6 tracks**, **5 songs**, and a capacity of about **40,000 notes** per song. It does not record the audio from AUDIO IN. If you want the sound as it comes from the speakers, you have to record it outside, from PHONES/OUTPUT.\n\nThere is another, different mode for recording your performance **along with a lesson** from the bank. Do not mix it with these 5 keyboard songs: the lesson uses its own recording space.\n\n## One clean track\n\n1. Choose the tone and the tempo **before** you record. Changing the tone in the middle of the take is part of the performance; changing it afterward does not rewrite the track.\n2. Enter the recorder and choose one of the 5 songs that is empty, or one you accept replacing.\n3. Arm track 1.\n4. Press record start. Depending on the mode, the metronome counts in. Enter on the beat, not a measure late.\n5. Play the phrase. Stop with the recorder stop.\n6. Listen. If it does not work, record **that** track again, not all six.\n\n## Add the others\n\n1. Start playback of track 1 and arm track 2 with another tone, for example a bass.\n2. Record only when you can follow track 1 without watching your hands the whole time.\n3. Save one track for long chords and another for the melody. Six tracks run out fast if you duplicate the same thing.\n4. Polyphony is still 48 notes. A piano chord with pedal on two tracks, plus a pad, can steal voices. If a note cuts off, remove a layer or shorten the pedal in the take.\n\n## Get the idea off the keyboard\n\nWhen the song is worth keeping, save it to USB memory from the save menu, or send it to the computer with the tool Casio documents for this instrument. The recorder’s 5 memories are working space. They are not a permanent archive if another day you need the room and you confirm a delete.\n\nTurn auto accompaniment off if you do not want a rhythm to slip into the take. What you hear while you record is what gets written."
+  },
+  {
+    "id": "learn-acordes-01",
+    "type": "learning",
+    "title": "Chords with the left hand",
+    "slug": "acordes-con-la-mano-izquierda",
+    "description": "Lock into the rhythm with three chords and use Chord Book when the fingering does not show up.",
+    "tags": ["chords", "rhythm", "accompaniment", "practice"],
+    "difficulty": "medio",
+    "content": "The goal is to hold a CT-X800 rhythm with the left hand while the right plays a minimal melody. You will use three major chords: **C**, **F**, and **G**. You do not need the bank. You need a slow rhythm in **4**.\n\n## Set up\n\n1. Choose a clear rhythm, without extra decoration. Basic pop or rock works well.\n2. Tempo **80**.\n3. Turn on auto accompaniment and the full fingering chord mode (Fingered), not the shortcut, so the hand learns the real shape.\n4. Open **Chord Book**, look at C major, and close the help. The shape is C–E–G.\n\n## The chord wheel\n\nCount 4 beats on each chord. Change on beat 1, not on beat 4.\n\n1. Two measures of C\n2. Two measures of F\n3. Two measures of G\n4. Two measures of C\n\nF major is F–A–C. G major is G–B–D. If the LCD shows another name, a finger is extra or missing. Stop and look at Chord Book again. Do not memorize a chord that was written wrong.\n\n## Add the right hand\n\nWhen the left hand changes on time for two passes, add the white notes of C major with the right hand: C, D, E, G. One note per measure is enough. You do not need a long melody.\n\nSynchro Start helps: the rhythm starts when the first chord lands, so you do not have to press START/STOP with your hand busy. If you prefer your foot, assign the pedal to **Rhythm** and start from there.\n\nSave the scene in a registration when you like the sound. Tomorrow the tempo and the rhythm will still be together."
+  },
+  {
+    "id": "learn-eval-01",
+    "type": "learning",
+    "title": "Read the lesson evaluation",
+    "slug": "evaluacion-de-la-leccion",
+    "description": "What the Remember score measures, and how to repeat only the phrase that failed.",
+    "tags": ["lesson", "evaluation", "step up", "practice"],
+    "difficulty": "fácil",
+    "content": "The evaluation appears when you finish a lesson pass, especially in **Remember**, when there is no guide left. It does not reward volume or the tone you chose. It looks at whether the notes were the ones in the phrase and whether they entered on time.\n\nA low score with the right notes is almost always rushing. A low score with perfect tempo is usually a finger that went to the next key.\n\n## How to use it\n\n1. Choose a bank song you have already done in Watch.\n2. Move to Remember, with one hand only.\n3. Play the whole phrase without stopping to fix it: the evaluation needs the complete take.\n4. Read the result. Go back to Listen only if you no longer remember the melody. Go back to Watch if you know the melody but the finger does not arrive.\n5. Repeat the phrase, not the song. Step Up is split into phrases for exactly this.\n\n## A study rule\n\nDo not open another song while this evaluation keeps falling on the same measure. Three focused passes on that measure raise it more than changing pieces.\n\nEasy Mode can give you a kinder score. It helps you not get frustrated on the first day. When you want to know how you are really doing, turn it off and accept the number.\n\nThe metronome, a lower tempo, and the R or L part on its own are the three tools that move that score. The sustain pedal, here, usually hides a wrong note: study with it off and connect it when the phrase is already clean."
+  }
+]

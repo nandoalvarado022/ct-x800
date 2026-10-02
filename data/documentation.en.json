@@ -1,0 +1,110 @@
+[
+  {
+    "id": "config-pedal-01",
+    "type": "documentation",
+    "title": "How to set the sustain pedal",
+    "slug": "configurar-pedal-sustain",
+    "description": "A short guide to assign and check the pedal on the CT-X800: sustain, sostenuto, soft, or rhythm start.",
+    "tags": ["pedal", "sustain", "setup", "hardware"],
+    "content": "The CT-X800 has a standard pedal jack. It accepts a switch pedal, such as the Casio SP-3 or SP-20, and can work as sustain, sostenuto, soft, or rhythm start. It does not calibrate a continuous travel: it is not the half-pedaling of a stage piano.\n\n## Connect\n\n1. Turn the keyboard off or lower the volume.\n2. Plug the pedal into the **PEDAL** jack on the back. It is a standard jack, different from PHONES/OUTPUT and AUDIO IN.\n3. Turn it on and play a note. With the factory effect (sustain), hold the pedal down, release the key, and the sound should continue until you lift your foot.\n\nIf a pedal from another brand does the opposite —it sustains when you release it— the problem is usually the switch polarity. The CT-X800 has no polarity setting: use a pedal with a polarity switch or a model made for Casio.\n\n## Choose the effect\n\n1. Press **FUNCTION**.\n2. Find the **Pedal** item with the dial or the value buttons and confirm it.\n3. Choose the effect on the screen:\n   - **Sustain**: lengthens what you are playing while the pedal stays down.\n   - **Sostenuto**: lengthens only the notes that were already held when you pressed it. What you play afterward sounds normally.\n   - **Soft**: lowers the level of the notes you play with the pedal down.\n   - **Rhythm**: the pedal starts and stops the rhythm or the song, useful if you do not want to leave the keys to press START/STOP.\n4. Press **FUNCTION** again to go back to playing.\n\n## Check that it stuck\n\nPlay a C major chord, press the pedal, and release the keys. In sustain the chord remains. Switch to sostenuto, hold only the C, press the pedal, then play an E and a G: the C stays and the other two notes do not. If nothing changes, check that the plug went all the way in and that the volume is not at zero.\n\nThe pedal is not saved as a separate file: if you want to bring back tone, rhythm, and pedal effect together, save the scene in a registration memory."
+  },
+  {
+    "id": "config-tactil-01",
+    "type": "documentation",
+    "title": "Adjust touch response",
+    "slug": "respuesta-al-tacto",
+    "description": "The three sensitivity levels on the CT-X800, and when it is worth turning touch off.",
+    "tags": ["touch", "expression", "setup", "keyboard"],
+    "content": "The 61 keys of the CT-X800 read attack velocity. The published specification offers **three sensitivity levels** and the **off** position. The AiX sound source uses that velocity to open the tone: a piano sounds brighter if you strike, and softer if you brush the key.\n\n## Change the level\n\n1. Press **FUNCTION**.\n2. Enter **Touch** (touch response).\n3. Try the three levels with the same phrase, without changing tone.\n4. Leave the level where the piano in the library answers your hand, not the other way around.\n\nOff exists for sounds that on stage should not depend on force: organs, pads, accompaniment basses, or a part you are sequencing and want even. With touch off, every note comes out at a fixed velocity.\n\n## What this setting does not do\n\nIt does not change polyphony or the overall volume. Volume stays on the main knob. If the piano sounds weak even when you strike hard, raise the volume first and then check touch. Some tones use less polyphony (Casio’s spec lists 24 notes on certain sounds): if the chord cuts off, you are at the voice limit, not in a touch problem.\n\nTo practice dynamics, leave touch on, choose a piano tone, and use the metronome at a comfortable tempo. The C-major phrase lesson is there so you can hear it."
+  },
+  {
+    "id": "config-split-01",
+    "type": "documentation",
+    "title": "Split and layer sounds",
+    "slug": "split-y-layer",
+    "description": "How to use Split and Layer for a bass with chords, or two tones on the same key.",
+    "tags": ["split", "layer", "tones", "setup"],
+    "content": "The CT-X800 starts from **600 tones** and can use them in two ways at once: **Split** cuts the keyboard into two zones and **Layer** stacks two sounds on the same keys. The **Piano/Organ** button jumps to those timbres without walking the whole list.\n\n## Layer\n\n1. Choose the main tone, for example a piano.\n2. Turn **Layer** on.\n3. Choose the second tone, for example strings or a soft pad.\n4. Play a chord. You should hear both layers. If one covers the other, change the second tone before you raise the overall volume: volume is shared for the main output.\n\nLayer adds voices. A piano plus a pad uses polyphony twice as fast. With a maximum polyphony of 48 notes, a long chord with pedal and a rhythm playing can hit the limit. If notes get stolen, remove a layer.\n\n## Split\n\n1. Turn **Split** on.\n2. The left hand stays on one tone (bass or rhythm section) and the right hand on another.\n3. The split point is adjusted in the split-point item inside **FUNCTION**. The screen shows the note. Move it until the bass does not invade the melody.\n4. To go back to one sound across the whole keyboard, turn Split and Layer off.\n\nSplit and Layer can be combined, but it is easier to memorize the scene once you like it. Save it in a registration before you change songs: if you turn the unit off without registering, the combination does not have to still be there when you turn it on.\n\n## Quick test\n\nPut a bass on the left and a piano on the right. Play the root with the left hand and the melody with the right. If the bass sounds in the melody zone, move the split point to the left."
+  },
+  {
+    "id": "config-registro-01",
+    "type": "documentation",
+    "title": "Registration memories",
+    "slug": "memorias-de-registro",
+    "description": "Save tone, rhythm, tempo, and keyboard mode in the CT-X800 registration memories.",
+    "tags": ["registration", "live", "setup", "memory"],
+    "content": "A registration is a snapshot of the setup you want to walk on stage with: tone, rhythm, tempo, split, layer, and other scene settings. The published CT-X800 specification lists **16 registration memories**. They are not songs. If what you want to keep is a performance note by note, that goes to the recorder or to a user song.\n\n## Save the scene\n\n1. Leave the keyboard the way you want to hear it. Choose tone, rhythm, and tempo. Turn split or layer on if you need them.\n2. Enter registration mode and choose the bank and the destination slot.\n3. Save with the panel store operation (STORE / registration, depending on the panel printing).\n4. Change the tone on purpose and call that registration again. The previous scene has to come back.\n\n## Call a registration in the middle of a tune\n\nCall the registration one measure before the change, not on top of the downbeat, so the new tone does not enter late. If you are also changing rhythm, wait until the end of a phrase.\n\nRegistrations live in the keyboard memory. So you do not depend on a single unit, USB memory can save and load instrument data, including setups, from the USB operations menu. Format that drive on the CT-X800 itself before the first use: formatting erases whatever was inside.\n\n## What does not fit in a registration\n\nIt does not replace the 10 user songs or the 5 songs of the 6-track recorder. It also does not lengthen the pedal or change polyphony. Think of the registration as the live preset, and of the recorder as the tape."
+  },
+  {
+    "id": "config-afinacion-01",
+    "type": "documentation",
+    "title": "Transpose and tuning",
+    "slug": "transposicion-y-afinacion",
+    "description": "Move the keyboard up or down by semitones and tune middle A so you can play with other people.",
+    "tags": ["transpose", "tuning", "setup", "pitch"],
+    "content": "There are two different settings and it is worth not mixing them. **Transpose** moves the whole performance by semitones: it is for singing a song in another key without changing fingering. **Tune** moves the master tuning in cents, around A4 = 440 Hz, to match an acoustic piano or a recording that is not at 440.\n\nOn this series, transpose runs from **−12 to +12** semitones. Tuning is edited in **FUNCTION** and the screen shows the value.\n\n## Transpose\n\n1. Press **FUNCTION** and enter **Transpose**.\n2. Move up or down one step at a time. +2 semitones turns a C fingering into a D sound.\n3. Play the same position as before and check with a tuner or with the other person in the band.\n4. Go back to 0 when you finish. A forgotten transpose is the most common cause of “the keyboard feels weird today”.\n\n## Tune\n\n1. In **FUNCTION**, open **Tune**.\n2. Adjust while a reference A is sounding. Move it a little: a few cents are noticeable, and a big jump is already another note. That is what transpose is for.\n3. If you use AUDIO IN to play over a track, tune the CT-X800 to that track, not the other way around.\n\nThe pitch bend wheel does not replace these settings: the wheel is a momentary gesture and returns to center. The wheel range is another parameter, from 0 to 24 semitones."
+  },
+  {
+    "id": "config-metro-01",
+    "type": "documentation",
+    "title": "Metronome, tempo, and meter",
+    "slug": "metronomo",
+    "description": "The CT-X800 metronome runs from 20 to 255 BPM and marks 0 to 9 beats per measure.",
+    "tags": ["metronome", "tempo", "practice", "rhythm"],
+    "content": "The metronome is the time reference both for practicing hands separately and for locking an accompaniment rhythm. On the CT-X800 the tempo runs from **20 to 255** and the meter can mark from **0 to 9** beats.\n\n## Start it\n\n1. Press the metronome button. The click starts at the tempo shown on the screen.\n2. Adjust the tempo with **TEMPO** and the dial. For study, drop 10 or 20 BPM from the song’s final tempo.\n3. If the click does not match the bank song, look at that song’s tempo on the screen and copy the number. You do not have to guess it.\n4. Beats per measure are changed in the metronome setting. A 4 accents every four clicks. A 3 is for a waltz. 0 leaves the click even, with no accent.\n\n## Practice with it\n\nPlay only the right hand for four measures. Stop. Bring in the left for another four. Join them when both can hold the click without rushing. Step Up lesson evaluation also watches the time: a metronome beforehand keeps the score from dropping because of rush, not because of wrong notes.\n\nThe click volume is independent of the musical idea. If it covers the piano, lower it in the metronome setting before you raise the keyboard’s overall volume."
+  },
+  {
+    "id": "config-ritmo-01",
+    "type": "documentation",
+    "title": "Rhythms, chords, and Chord Book",
+    "slug": "acompanamiento-automatico",
+    "description": "The 195 rhythms, auto accompaniment, and how to look up a chord on the screen.",
+    "tags": ["rhythm", "chords", "accompaniment", "chord book"],
+    "content": "The CT-X800 includes **195 rhythms** and room for **10 user rhythms**, about 64 KB each. With auto accompaniment, the left hand triggers bass, harmony, and drums according to the chord you form. **Chord Book** shows on screen how to finger a chord when you do not want to guess.\n\n## Drums only\n\n1. Press **RHYTHM** and choose a style with the dial or the categories.\n2. Set the tempo.\n3. Press **START/STOP**. The rhythm section plays, without chords, until you turn full accompaniment on.\n4. **INTRO**, the variations, and **ENDING** change the section. Synchro Start waits until you play the first note or the first chord to come in.\n\n## Accompaniment with chords\n\n1. Turn accompaniment mode on.\n2. In the left zone of the keyboard, form the chord. Depending on the fingering mode you can use full chords (Fingered) or Casio’s simplified Casio Chord system.\n3. The chord name appears on the screen. If it is not the one you thought, fix the fingering before you memorize the gesture.\n4. Change chords on the beat: arriving late is more obvious than missing an extension.\n\nChord Book is for looking things up. Open it, choose the chord, and read the fingering the LCD shows. Then close it and play it over the rhythm, without watching every finger.\n\nTo save an edited rhythm or a loaded one, use a user rhythm slot. Do not use a user song for that: they are different memories."
+  },
+  {
+    "id": "config-fx-01",
+    "type": "documentation",
+    "title": "Reverb, chorus, and equalization",
+    "slug": "reverb-chorus-y-ecualizador",
+    "description": "Reverb depth from 1 to 20, chorus from 1 to 10, and the overall equalizer.",
+    "tags": ["reverb", "chorus", "effects", "sound"],
+    "content": "The CT-X800 specification separates two global effects. **Reverb** runs from 1 to 20, or it can stay off. **Chorus** runs from 1 to 10, or it can follow the chorus the tone already has. The manual also includes an equalizer setting for the overall output: it is the color of the whole instrument, not an insert per track.\n\n## Choose a reverb\n\n1. In **FUNCTION**, open **Reverb**.\n2. Off is the driest and the most useful if you are going to record from the headphone output into a mixer that already has its own reverb.\n3. A low value (around the first third) is enough for practicing in a room. High values blur piano attacks and make the metronome seem late.\n4. If you use a piano and strings Layer, lower the reverb: the strings already have a tail.\n\n## Chorus\n\nA low chorus widens pads and electric guitars. On an acoustic piano it is usually too much. If the tone already includes chorus and you double it with the master chorus, the sound moves too much. Leave it on the “tone” setting when you want to respect the preset.\n\n## Equalizer\n\nChange the equalizer when the internal speaker sounds dull, or when the headphone output goes to a system with a lot of low end. Note the preset that works at home and the one that works at rehearsal: you can leave each one inside a different registration along with the tone.\n\nThese effects do not increase polyphony or fix a saturated MIDI file. If an imported song sounds muddy, check the SMF and the volume of each part first."
+  },
+  {
+    "id": "config-usb-midi-01",
+    "type": "documentation",
+    "title": "Connect the CT-X800 over USB-MIDI",
+    "slug": "conexion-usb-midi",
+    "description": "The Type B port speaks class-compliant MIDI with the computer, on 16 GM channels.",
+    "tags": ["midi", "usb", "computer", "daw"],
+    "content": "The CT-X800 does not have 5-pin DIN connectors. MIDI travels through the **USB Type B port**, the square one that goes to the computer. The **Type A port** is for the USB drive and does not serve the DAW. Casio publishes this connection as **GM level 1**, with multitimbral reception on **16 channels**.\n\nOn current systems the port is class-compliant: macOS and Windows see it without a separate driver. The usual device name is **CASIO USB-MIDI**.\n\n## Cable it\n\n1. Turn the keyboard on.\n2. Connect a USB-B cable to the keyboard and USB-A (or the adapter your computer uses) to the machine.\n3. In the DAW, choose the CASIO USB-MIDI input and output. You do not need an interface in between.\n4. Play a key. If the MIDI input meter moves, the route is alive.\n\n## Doubled notes\n\nIf you hear every note twice, the keyboard is sounding internally and it is also playing the MIDI the DAW sends back. Enter **FUNCTION** and turn **Local Control** off. The keyboard still sends what you play, but the sound is generated only by what comes back from the computer. Turn Local Control on again when you disconnect the DAW: if you leave it off, the keys seem mute.\n\n## What you can do and what you cannot\n\nYou can record the performance, trigger a virtual instrument, or let a GM file sound with the CT-X800 tones. Do not turn this connection into a file load: SMF files you want to carry in your pocket are copied to the Type A USB drive, or transferred with the tool Casio documents for the computer. The MIDI port does not format drives and it does not replace the bank of 160 songs."
+  },
+  {
+    "id": "config-usb-flash-01",
+    "type": "documentation",
+    "title": "USB memory: format, SMF, and copies",
+    "slug": "memoria-usb-archivos",
+    "description": "FAT32, SMF format 0 or 1, and the difference between playing, loading, and saving.",
+    "tags": ["usb", "midi", "smf", "files", "memory"],
+    "content": "The **USB Type A** port on the CT-X800 reads a drive for three jobs: play an SMF directly, load data into internal memory, and save what is on the keyboard. The specification sums it up as direct SMF playback, storage, load, delete, and format.\n\n## Prepare the drive\n\n1. Use a **FAT32** drive. If the computer handed it over in another file system, the keyboard may not see it.\n2. The first time, format it from the CT-X800’s own USB menu. Formatting **erases everything** on it.\n3. Do not remove the drive while the screen says it is working.\n\n## Which files it understands\n\nFor songs, the file has to be a **Standard MIDI File format 0 or 1**, with the extension **.MID**. Format 2 is not compatible. Each user song accepts about **320 KB**. If the file is larger, reduce it on the computer (fewer silent tracks, less repeated system data) before you copy it.\n\nThere are **10** user song slots. They are independent of the **5** songs in the 6-track recorder and of the **160** factory songs.\n\n## Three operations, not one\n\n- **Play**: the file sounds from the USB drive. It does not use an internal slot, but the drive has to stay plugged in.\n- **Load**: copies the song into one of the 10 user slots. After that you can leave the drive at home.\n- **Save**: takes a song, a rhythm, a registration, or a data copy out of the keyboard onto the drive.\n\nThe step-by-step guide for bringing in a new song is in the learning module, in “Import a MIDI song”."
+  },
+  {
+    "id": "config-bend-01",
+    "type": "documentation",
+    "title": "Pitch bend wheel",
+    "slug": "rueda-de-pitch-bend",
+    "description": "The wheel range runs from 0 to 24 semitones, and the gesture always returns to center.",
+    "tags": ["pitch bend", "expression", "wheel", "setup"],
+    "content": "The wheel on the left shifts the pitch while you move it and **returns to center** when you let go. It does not leave the keyboard transposed. For a fixed key change, use Transpose.\n\nThe published range is **0 to 24 semitones**. 0 cancels the effect. 2 is a whole tone, the classic guitar or wind gesture. 12 is an octave and is used as an effect, not as tuning.\n\n## Set the range\n\n1. Open **FUNCTION** and enter the pitch bend range parameter.\n2. Choose the number of semitones.\n3. Hold a note and move the wheel up and down. Center has to return the original note. If it does not come back, the wheel is not at mechanical rest: let it go completely.\n\nOn a synth solo, a range of 2 keeps the phrasing singable. On an organ, many people prefer 0 so they do not detune a chord by accident. Save that value inside the tune’s registration.\n\nThe wheel also sends pitch bend over USB-MIDI. If a virtual instrument on the computer answers with another curve, the range that matters is the program’s, not only the CT-X800’s."
+  },
+  {
+    "id": "config-audio-01",
+    "type": "documentation",
+    "title": "Headphones, output, and Audio In",
+    "slug": "audio-auriculares-y-alimentacion",
+    "description": "PHONES/OUTPUT, the audio input for playing over a track, and how the unit is powered.",
+    "tags": ["headphones", "audio", "power", "hardware"],
+    "content": "The CT-X800 puts listening on two jacks and a two-way power supply.\n\n## PHONES/OUTPUT\n\nIt is a **standard stereo jack**. The spec lists an output impedance of **167 Ω** and a maximum of **4.5 V RMS**. It works for headphones and also for sending the signal to a mixer or an interface, with the right cable (stereo jack to two mono jacks, or to an input that accepts stereo).\n\nLower the CT-X800 volume before you connect. Raise it afterward. If the mixer distorts with the keyboard volume at halfway, lower the keyboard and raise the mixer gain only until the peak stays clean.\n\nHeadphones spare the internal speaker and let you hear the metronome without filling the house. Do not leave the volume at maximum with headphones on: the output can deliver more level than it seems.\n\n## AUDIO IN\n\nThe stereo mini input jack has an impedance of **10 kΩ** and a sensitivity of **200 mV**. It is meant for a phone, a tablet, or a player, so you can play over a track.\n\n1. Lower the volume of the external device.\n2. Connect it to **AUDIO IN**.\n3. Raise its volume until the track and the piano live together. The CT-X800 main volume does not replace the phone volume: they are two stages.\n\nThis input does not record the external audio inside a user song. If you need to keep the mix, record it outside, from PHONES/OUTPUT, into the interface.\n\n## Power\n\nYou can use **6 alkaline AA batteries** or the AC adaptor specified for the model. If the keyboard turns itself off in the middle of a long rehearsal, check auto power off in **FUNCTION** before you suspect the batteries. Weak batteries bring dropouts, dim screens, or a restart: replace all of them at once, not one by one.\n\nUnplug the adaptor from the wall if you will not use the unit for several days, and do not leave the batteries in for months if the adaptor is the one that always does the work."
+  }
+]

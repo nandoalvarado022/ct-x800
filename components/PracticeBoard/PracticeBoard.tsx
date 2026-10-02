@@ -1,36 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import { useI18n } from "@/components/LocaleProvider/LocaleProvider";
 import { useProgress } from "@/components/ProgressProvider/ProgressProvider";
+import type { Messages } from "@/lib/messages";
 import type { PracticeExercise } from "@/lib/types";
 import styles from "./PracticeBoard.module.scss";
 
-function moodFor(done: number, total: number) {
-  if (done <= 0) {
-    return {
-      name: "Manos frías",
-      line: "Todavía no hay sonido. La primera estación es solo sentarte y soltar las manos.",
-    };
-  }
-  if (done < total) {
-    return {
-      name: "Entrando en calor",
-      line: "Sigue con la estación marcada. Una a la vez, con el mismo pulso.",
-    };
-  }
-  return {
-    name: "Listo para tocar",
-    line: "Ronda completa. Los dedos ya pueden ir a una canción.",
-  };
+function moodFor(done: number, total: number, copy: Messages["board"]) {
+  if (done <= 0) return { name: copy.cold, line: copy.coldLine };
+  if (done < total) return { name: copy.warming, line: copy.warmingLine };
+  return { name: copy.ready, line: copy.readyLine };
 }
 
 export function PracticeBoard({ exercises }: { exercises: PracticeExercise[] }) {
+  const { m } = useI18n();
   const { ready, isPracticeComplete } = useProgress();
   const doneCount = exercises.filter((item) => isPracticeComplete(item.slug)).length;
   const shownDone = ready ? doneCount : 0;
   const total = exercises.length;
   const ratio = total === 0 ? 0 : shownDone / total;
-  const mood = ready ? moodFor(shownDone, total) : { name: "Calentamiento", line: "Cargando tu ronda…" };
+  const mood = ready
+    ? moodFor(shownDone, total, m.board)
+    : { name: m.board.loading, line: m.board.loadingLine };
   const minutes = exercises.reduce((sum, item) => sum + item.minutes, 0);
   const xp = exercises.reduce((sum, item) => sum + item.xp, 0);
   const earned = exercises.reduce((sum, item) => {
@@ -42,13 +34,13 @@ export function PracticeBoard({ exercises }: { exercises: PracticeExercise[] }) 
     : undefined;
 
   return (
-    <section className={styles.board} aria-label="Sala de calentamiento">
+    <section className={styles.board} aria-label={m.board.label}>
       <div className={styles.hud}>
         <div>
           <p className={styles.mood}>{mood.name}</p>
           <p className={styles.line}>{mood.line}</p>
           <p className={styles.meta}>
-            {minutes} min en total · {earned} de {xp} XP
+            {m.board.totals(minutes, earned, xp)}
           </p>
         </div>
         <div
@@ -58,7 +50,7 @@ export function PracticeBoard({ exercises }: { exercises: PracticeExercise[] }) 
           aria-valuemin={0}
           aria-valuemax={total}
           aria-valuenow={shownDone}
-          aria-label="Estaciones de calentamiento"
+          aria-label={m.board.stations}
         >
           <span>
             {shownDone}/{total}
@@ -70,7 +62,7 @@ export function PracticeBoard({ exercises }: { exercises: PracticeExercise[] }) 
         {exercises.map((item, index) => {
           const done = ready && isPracticeComplete(item.slug);
           const current = item.slug === nextSlug;
-          const status = done ? "Lista" : current ? "Te toca" : "En la ronda";
+          const status = done ? m.board.readyStatus : current ? m.board.currentStatus : m.board.waitingStatus;
           return (
             <li key={item.id}>
               <Link
@@ -87,13 +79,13 @@ export function PracticeBoard({ exercises }: { exercises: PracticeExercise[] }) 
                     <span>{item.minutes} min</span>
                     <span>{item.xp} XP</span>
                     <span>
-                      {item.steps.length} {item.steps.length === 1 ? "paso" : "pasos"}
+                      {item.steps.length} {item.steps.length === 1 ? m.board.step : m.board.steps}
                     </span>
                   </span>
                   <strong>{item.title}</strong>
                   <span className={styles.description}>{item.description}</span>
                   <span className={styles.go}>
-                    {done ? "Repetir estación" : current ? "Empezar aquí" : "Abrir estación"}
+                    {done ? m.board.repeat : current ? m.board.start : m.board.open}
                   </span>
                 </span>
               </Link>
@@ -104,7 +96,7 @@ export function PracticeBoard({ exercises }: { exercises: PracticeExercise[] }) 
 
       {ready && total > 0 && shownDone === total ? (
         <Link className={styles.play} href="/aprender">
-          Ronda lista · ir a tocar
+          {m.board.play}
         </Link>
       ) : null}
     </section>
