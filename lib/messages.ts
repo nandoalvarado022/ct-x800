@@ -16,6 +16,8 @@ const en = {
     ],
   },
   skip: "Skip to content",
+  banner:
+    "Whether you have a Casio CT-X800, a Yamaha P-145, a Yamaha P-71, or any other piano, you are going to love this page. We have a study mode, practice, interactive manuals, and even an AI expert to answer every question, completely free.",
   nav: {
     label: "Sections",
     docs: "Documentation",
@@ -74,6 +76,8 @@ const en = {
     lede: "Set the pedal, walk through the Step Up lessons, and bring your MIDI files to the keyboard. Every guide comes from the instrument’s published specification.",
     docs: "Open the documentation",
     warmup: "Warm up your hands",
+    mute: "Mute piano",
+    unmute: "Turn piano sound on",
     specs: [
       { value: "61", label: "keys" },
       { value: "600", label: "AiX tones" },
@@ -364,6 +368,8 @@ const es: typeof en = {
     ],
   },
   skip: "Saltar al contenido",
+  banner:
+    "Ya sea que tengas un Casio CT-X800 o un Yamaha P-145, Yamaha P-71 o cualquier otro piano, esta página te va a encantar. Tenemos modo estudio, práctica, manuales interactivos y hasta un Experto con IA para solucionar todas tus dudas, totalmente gratis.",
   nav: {
     label: "Secciones",
     docs: "Documentación",
@@ -422,6 +428,8 @@ const es: typeof en = {
     lede: "Configura el pedal, recorre las lecciones Step Up y lleva tus MIDI al teclado. Cada ficha sale de la especificación publicada del instrumento.",
     docs: "Abrir documentación",
     warmup: "Calentar las manos",
+    mute: "Silenciar el piano",
+    unmute: "Activar el sonido del piano",
     specs: [
       { value: "61", label: "teclas" },
       { value: "600", label: "tonos AiX" },

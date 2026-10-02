@@ -7,6 +7,23 @@
   backdrop-filter: blur(18px);
 }
 
+.banner {
+  margin: 0;
+  padding: 0.7rem 1.25rem;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #fff;
+  background: linear-gradient(90deg, #5b21b6, #c2410c);
+}
+
+@media (max-width: 720px) {
+  .banner {
+    font-size: 0.84rem;
+    padding: 0.55rem 0.9rem;
+  }
+}
+
 .inner {
   width: min(var(--max), calc(100% - 2rem));
   margin: 0 auto;

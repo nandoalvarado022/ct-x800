@@ -47,6 +47,7 @@ export function SiteHeader() {
 
   return (
     <header className={styles.bar}>
+      <p className={styles.banner}>{m.banner}</p>
       <div className={styles.inner}>
         <Link className={styles.brand} href="/">
           <Mark />

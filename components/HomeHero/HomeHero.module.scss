@@ -67,10 +67,11 @@
 
 .lcd {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 0.9rem;
-  padding: 0.7rem 0.85rem;
+  padding: 0.55rem 0.7rem 0.55rem 0.85rem;
   border-radius: 12px;
   background: #140f08;
   color: #ffc48a;
@@ -78,6 +79,30 @@
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.lcdEnd {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.mute {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid rgba(255, 196, 138, 0.45);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffc48a;
+  cursor: pointer;
+}
+
+.mute[aria-pressed="true"] {
+  background: #ffc48a;
+  color: #1a0d00;
 }
 
 .piano {
