@@ -144,18 +144,19 @@ export function HomeHero() {
     mutedRef.current = next;
     setMuted(next);
     const master = masterRef.current;
-    if (!master || master.context.state === "closed") return;
+    const context = master?.context;
+    if (!master || !context || context.state === "closed") return;
 
     const apply = () => {
-      if (master.context.state === "closed") return;
-      const now = master.context.currentTime;
+      if (context.state === "closed") return;
+      const now = context.currentTime;
       master.gain.cancelScheduledValues(now);
       master.gain.setValueAtTime(next ? 0 : KEY_VOLUME, now);
       if (!next) playCurrentRef.current();
     };
 
-    if (master.context.state === "suspended") {
-      void master.context.resume().then(apply).catch(() => undefined);
+    if (context instanceof AudioContext && context.state === "suspended") {
+      void context.resume().then(apply).catch(() => undefined);
       return;
     }
     apply();
