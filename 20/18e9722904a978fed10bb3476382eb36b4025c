@@ -1,0 +1,264 @@
+data/learning.en.json
+  s_4de5d32139a189::t_1c5b2c22e63f47 1-92
+components/SiteFooter/SiteFooter.tsx
+  s_4de5d32139a189::t_9379f3c832a133 1-2,4,8-9,13-19,21-29
+app/juegos/partitura/page.module.scss
+  s_266dcf467b5362::t_5743cf36a366e7 1-14
+app/juegos/partitura/page.tsx
+  s_4de5d32139a189::t_db6b51b8190b66 5-6,9-11,13-16,19,22
+  s_266dcf467b5362::t_611197e5ac4c52 1-4,7-8,12,17-18,20-21,23-26
+app/page.tsx
+  s_4de5d32139a189::t_5354246b0d48a7 5-7,10-15,23-25,31,36,38-40,43-45,48-50,53-55,60,73,80,90-91,93
+components/ScoreGame/ScoreGame.module.scss
+  s_266dcf467b5362::t_cfd4f99d6fda6b 187
+  s_266dcf467b5362::t_aa174f548b009e 1,3-78,81,90-91,147-186,188-189,194-273
+  s_266dcf467b5362::t_cd1135c037d6b9 2
+  s_266dcf467b5362::t_8ae2d799cbf478 105,107-146
+  s_266dcf467b5362::t_5a877d4a2c7521 79-80,82-89,92-104,106
+  s_266dcf467b5362::t_c30b88a7559c87 190-193
+lib/content.ts
+  s_4de5d32139a189::t_89aa0fa9a62992 173-175,177
+  s_4de5d32139a189::t_3c7377121cb3c6 100-125,127-128,131-132,135-136,139-140,143-144,147-148,151-153,155,158-159
+  s_4de5d32139a189::t_38072c42466a9d 1-7
+app/juegos/page.module.scss
+  s_266dcf467b5362::t_7c0d00180b9f60 1-14
+components/ScoreGame/MeasureStaff.tsx
+  s_266dcf467b5362::t_c971e77247b61d 41
+  s_4de5d32139a189::t_25473f1f0dca4b 77-84
+  s_266dcf467b5362::t_cb296be884cbf6 91,94-95
+  s_266dcf467b5362::t_6e36a768d09c1a 11,16,18-23,37-40,42,44,50,58-59,67,70-74,85,97-102,104,106-107,110-111,116-117,127-141,144,151-163,165-167,171-198
+  s_266dcf467b5362::t_6c1f37f037d0ba 43,45-49,51-57,60-66,68-69
+  s_266dcf467b5362::t_e84f79a33b9b39 4-10,15,17,24-36,75-76,86-90,92-93,96,103,105,112-115,118-119,121-126,142-143,199-215
+  s_4de5d32139a189::t_8113795c612215 120
+  s_266dcf467b5362::t_8975b420937d2e 12-14
+  s_4de5d32139a189::t_84d4f5a05e77c3 1-3
+  s_4de5d32139a189::t_b5af2ff642599e 108-109
+  s_266dcf467b5362::t_ca2f65a17a07ad 145-150
+  s_266dcf467b5362::t_4f3d20927b93d4 164,168-170
+lib/expert.ts
+  s_4de5d32139a189::t_797efa4122a5ab 34-71
+components/SiteHeader/SiteHeader.tsx
+  s_4de5d32139a189::t_4d7de1cb968639 34,38-46,58,72-79,81-82,85,93
+  s_4de5d32139a189::t_55bd9ee718f287 5,7
+lib/midi-score.ts
+  s_266dcf467b5362::t_5116e309a7430b 1-2,7-36,38-40,43-44,52-97,144,146-151,153-175,177-186,188-192,194-200
+  s_266dcf467b5362::t_21a75bd5ca6f68 108,114-142
+  s_266dcf467b5362::t_240bf4de294806 45-51
+  s_4de5d32139a189::t_26e0c2e47b4613 187
+  s_4de5d32139a189::t_f11090f57e8868 143,145,152
+  s_4de5d32139a189::t_b09a040a319708 193
+  s_4de5d32139a189::t_b34423492066e7 3-5
+  s_266dcf467b5362::t_a4edaebf42e409 6
+  s_4de5d32139a189::t_9652eb8fc2de30 37,41-42
+  s_4de5d32139a189::t_6e033ae4558d04 176
+  s_266dcf467b5362::t_db3e1b0f4affe6 98-107,109-113
+data/practice.en.json
+  s_4de5d32139a189::t_362c545a9c2ebc 1-139
+app/layout.tsx
+  h_15f0de19236f1a 76-82
+  s_4de5d32139a189::t_fd2f5e736582d8 28-58
+  s_4de5d32139a189::t_79e4970b5d9507 5,9-11
+  s_4de5d32139a189::t_57b3005cba1bfd 62,67-69,71,83-94
+app/documentacion/page.tsx
+  s_4de5d32139a189::t_8a5679bc8f25b3 6,14,18
+  s_4de5d32139a189::t_0eec66df86645c 5,8-10,12-13,19
+app/aprender/[slug]/page.tsx
+  s_4de5d32139a189::t_2f0d8ca0045bb7 5-6,19,21-22,27,34,40,42,46-50
+app/practica/[slug]/page.tsx
+  s_4de5d32139a189::t_9202e917f4fe97 5-6,19,21-22,32,38,40,43-44
+package.json
+  s_266dcf467b5362::t_2c6dc6e634d71f 13,18
+app/aprender/page.tsx
+  s_4de5d32139a189::t_01647dd53c9917 5-6,8-10,12-14,18-19
+components/SiteHeader/SiteHeader.module.scss
+  s_4de5d32139a189::t_5f3f6402bfee14 111-135
+components/CompleteLesson/CompleteLesson.tsx
+  s_4de5d32139a189::t_d22afedd044090 11
+  s_4de5d32139a189::t_5b597d52c5d848 24-25,28
+  s_4de5d32139a189::t_c99fdd2e02304e 18
+  s_4de5d32139a189::t_427d5b8de65705 4
+lib/messages.ts
+  s_4de5d32139a189::t_daa57662b739ed 1-723
+app/documentacion/[slug]/page.tsx
+  s_4de5d32139a189::t_2676dbb485d5eb 5-6,19,21-22,34,40,42,45
+app/api/chat/route.ts
+  s_4de5d32139a189::t_3f8d4c70d779ca 3-5
+  s_4de5d32139a189::t_34ec62fb10291e 60,64
+  s_4de5d32139a189::t_4641b8ed664d4f 86
+  s_4de5d32139a189::t_4db51e6340d6fd 104
+  s_4de5d32139a189::t_960eff05e9f824 111
+  s_4de5d32139a189::t_4d740a57240911 69-70,73,77
+  s_4de5d32139a189::t_96d0f5f63ddc20 96
+  s_4de5d32139a189::t_b3d632fb129b08 53
+components/LocaleProvider/LocaleProvider.tsx
+  s_4de5d32139a189::t_42264bc19cae9e 1-44
+components/Catalog/Catalog.tsx
+  s_4de5d32139a189::t_da8c7cd970a772 111
+  s_4de5d32139a189::t_ddb92a207ea930 6,8
+  s_4de5d32139a189::t_40a212458fa6a6 125-126
+  s_4de5d32139a189::t_82bc1184aff4be 89
+  s_4de5d32139a189::t_92b188d76ceb2e 154
+  s_4de5d32139a189::t_4cc5f607fda48e 26
+  s_4de5d32139a189::t_96141f854885f3 170
+  s_4de5d32139a189::t_c2cc45ac79a752 97
+  s_4de5d32139a189::t_af0625001e82b1 132
+  s_4de5d32139a189::t_6d539106d92a95 103
+  s_4de5d32139a189::t_1e4e0684e598b9 162
+components/PracticeSession/PracticeSession.tsx
+  s_4de5d32139a189::t_4d29b80a820582 168
+  s_4de5d32139a189::t_dfa36270f59236 104
+  s_4de5d32139a189::t_e311bea0a78708 89,93
+  s_4de5d32139a189::t_c5f45df4b8b225 16,19,27
+  s_4de5d32139a189::t_c0a92c5fa57b73 163
+  s_4de5d32139a189::t_a860a886ddc79f 171-173
+  s_4de5d32139a189::t_3ef068dd16fa70 176
+  s_4de5d32139a189::t_b73a00b64e8f9c 180
+  s_4de5d32139a189::t_b636ca05dcb603 6
+  s_4de5d32139a189::t_c5a35d65392243 136-138,142,146,150
+  s_4de5d32139a189::t_480085d173b38d 41
+  s_4de5d32139a189::t_f7942bb363cf29 110
+components/StaffQuiz/StaffQuiz.tsx
+  s_4de5d32139a189::t_fffb290916821b 111-114,117,119,121,124-126
+  s_4de5d32139a189::t_46b5781f599ae9 141
+  s_4de5d32139a189::t_36a8ca20ad5255 73,75,77,79-81,83
+  s_4de5d32139a189::t_aef39239dc31a5 65-66
+  s_4de5d32139a189::t_ecd55cf979b404 28
+  s_4de5d32139a189::t_93f1b600c3b37a 4
+  s_4de5d32139a189::t_f99e28cc5011c5 21
+  s_4de5d32139a189::t_8bc7e7178dffbb 151
+  s_4de5d32139a189::t_ab5ded3f7609e5 44
+app/practica/page.tsx
+  s_4de5d32139a189::t_abf5daab7c3381 5-6,8-10,12-14,18-19
+components/ScoreGame/ScoreGame.tsx
+  s_266dcf467b5362::t_3d946840a2ed16 370-371,373,378,380-381,383,388
+  s_266dcf467b5362::t_48b15ac85c892a 284-289,296
+  s_266dcf467b5362::t_80f00345378947 34
+  s_4de5d32139a189::t_6dfcbb15b2fb62 410
+  s_266dcf467b5362::t_cbfd87525ac640 9,16,20
+  s_266dcf467b5362::t_568e7cf8fdfc71 282-283
+  s_266dcf467b5362::t_42d3c6f969044f 3
+  s_4de5d32139a189::t_1b857ee5c1106b 5
+  s_266dcf467b5362::t_75f17a7fbe021c 443-453,459-461
+  s_266dcf467b5362::t_eaa034e6a154da 454-458
+  s_266dcf467b5362::t_85af10944703c4 129-138
+  s_4de5d32139a189::t_0d9b1a82b6427f 248
+  s_4de5d32139a189::t_cbdf4ce70acc37 61
+  s_4de5d32139a189::t_c5aa4ffd5d27a5 48-49
+  s_4de5d32139a189::t_3c6ab1f5cba5d6 431,434
+  s_266dcf467b5362::t_c696700de3adc8 35
+  s_4de5d32139a189::t_9ab5b419b7efcd 331,333,335,338,341
+  s_266dcf467b5362::t_e916ac0c1c78ed 232,235-236
+  s_4de5d32139a189::t_d6a5730cd1bef8 310
+  s_4de5d32139a189::t_1d7835ff2e7b60 6
+  s_4de5d32139a189::t_8ceba59742e214 267
+  s_4de5d32139a189::t_64bda8beeeeb94 359,363
+  s_4de5d32139a189::t_a7d73dd2dd62b8 369,372,374-377,379,382,384-387,389,391,395
+  s_266dcf467b5362::t_c01576a49ae328 213-216
+  s_4de5d32139a189::t_1e5f9bf1cb06c0 26-29,32-33,36-44
+  s_266dcf467b5362::t_25a0bde890b094 1-2,4,7-8,10,13-15,17-19,21-25,30-31,45-47,50-60,62-128,139-147,149-212,217-231,233-234,237-247,249-251,253-257,259-266,268-281,299,301-302,308-309,311-320,322,324-325,327-330,332,334,336-337,339-340,342-348,350,354-358,360-362,364-368,398-409,411-426,428-430,432-433,435-442,462-469
+  s_266dcf467b5362::t_882d769db612a1 11-12
+  s_4de5d32139a189::t_22147f9d4c6135 427
+  s_266dcf467b5362::t_4d873e64ec65c6 252
+  s_4de5d32139a189::t_df272f2b4c90c6 258
+  s_266dcf467b5362::t_c0572417d62c17 390,392-394,396-397
+  s_4de5d32139a189::t_9cca9749cb878c 148
+  s_4de5d32139a189::t_4faac2928f74d4 290-295,297-298,300,303-307
+  s_4de5d32139a189::t_1ac65cb603faeb 321,323,326
+  s_4de5d32139a189::t_57c24bbac700e3 349,351-353
+app/experto/page.tsx
+  s_4de5d32139a189::t_ba565ae9d8c9fe 5-6,9-11,13-15,19,22-23,25,32
+app/error.tsx
+  s_4de5d32139a189::t_b25254b3611c94 3,12-13,16-17,19
+lib/site.ts
+  s_4de5d32139a189::t_a40845a1de8955 4
+components/ProgressProvider/ProgressProvider.tsx
+  s_4de5d32139a189::t_66c75a407953ec 11
+  s_4de5d32139a189::t_d77e249a8f94b5 16-17
+components/EntryView/EntryView.tsx
+  s_4de5d32139a189::t_673a29d74a6e7c 80
+  s_4de5d32139a189::t_fee6e42bbee059 61
+  s_4de5d32139a189::t_e990f1d974bc7f 5-6
+  s_4de5d32139a189::t_aa1aa81bcaf341 18-20,22
+  s_4de5d32139a189::t_c4d2458dff5a46 32
+  s_4de5d32139a189::t_f2e0433b9100e3 43
+  s_4de5d32139a189::t_0ac4fe16764a83 74
+  s_4de5d32139a189::t_90fa2a3127e769 49-50
+app/sitemap.ts
+  s_266dcf467b5362::t_949aa8f07d1e12 15
+app/opengraph-image.tsx
+  s_4de5d32139a189::t_3cdd59f9a262a5 33-34,37
+  s_4de5d32139a189::t_b4f045d5d468d3 3
+lib/get-locale.ts
+  s_4de5d32139a189::t_2bf8b41ee229e0 1-7
+app/not-found.tsx
+  s_4de5d32139a189::t_2d9815a55a96b0 2-3,6-8,12-13
+components/PracticeBoard/PracticeBoard.tsx
+  s_4de5d32139a189::t_bbeea86227b1d4 4,6,10-13
+  s_4de5d32139a189::t_3fc7f48c73d072 53
+  s_4de5d32139a189::t_d3efa6ed7d9612 65
+  s_4de5d32139a189::t_2cf8ce5b06c129 17,23-25
+  s_4de5d32139a189::t_3568560e1257f5 37
+  s_4de5d32139a189::t_aacb70316ff42f 43
+  s_4de5d32139a189::t_3523cd3c676823 99
+  s_4de5d32139a189::t_307a2ee2a354ef 88
+  s_4de5d32139a189::t_0f1dedc0387018 82
+data/documentation.en.json
+  s_4de5d32139a189::t_ed7eb819264c35 1-110
+app/juegos/page.tsx
+  s_266dcf467b5362::t_9db4c41043bf1f 2,7
+  s_266dcf467b5362::t_d07654f1c19d7a 21,23
+  s_4de5d32139a189::t_e6d932caefdf07 5-6,9-15,19,22
+components/ChatPanel/ChatPanel.tsx
+  s_4de5d32139a189::t_c8ffccaedfd65c 4
+  s_4de5d32139a189::t_de22ced7bcb044 109
+  s_4de5d32139a189::t_a5599d0ab0abce 16-19
+  s_4de5d32139a189::t_06da3a6812847b 112
+  s_4de5d32139a189::t_cdc878a62292d8 99
+  s_4de5d32139a189::t_826a82a31389fe 48
+  s_4de5d32139a189::t_889cc4a86605dc 84
+  s_4de5d32139a189::t_4e21b35f317474 59
+  s_4de5d32139a189::t_cb06ef459faad7 72
+  s_4de5d32139a189::t_16ca4b8a86d6d4 92
+  s_4de5d32139a189::t_137bec53b6f523 76
+  s_4de5d32139a189::t_e4b78aa45c384a 80
+  s_4de5d32139a189::t_4dbe40894b17f2 52
+components/HomeHero/HomeHero.tsx
+  s_4de5d32139a189::t_e74754c929ef32 33-35,38,41
+  s_4de5d32139a189::t_db9b2e1ab6f57f 6
+  s_4de5d32139a189::t_6a5425ecdc9c39 14,16
+components/SiteFooter/SiteFooter.module.scss
+  s_4de5d32139a189::t_1911cf4c9f24b1 32-46
+lib/locale.ts
+  s_4de5d32139a189::t_5b624dd8a1d800 1-11
+package-lock.json
+  s_266dcf467b5362::t_0309c599646c82 12,17,1312-1321,2212-2217,3579-3584,5664-5669,6119-6127
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2018e9722904a978fed10bb3476382eb36b4025c",
+  "prompts": {},
+  "humans": {
+    "h_15f0de19236f1a": {
+      "author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_266dcf467b5362": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "4f5b6b6e-1984-4bb9-8978-4237c70d9d47",
+        "model": "grok-4.7"
+      },
+      "human_author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    },
+    "s_4de5d32139a189": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c9767b23-2ab3-49fc-a4ae-27790734c7aa",
+        "model": "grok-4.7"
+      },
+      "human_author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    }
+  }
+}
