@@ -1,0 +1,19 @@
+components/HomeHero/HomeHero.tsx
+  s_91791dc51fd9c9::t_61db9177732528 147-148,151-152,158-159
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "33bce5cbf5cf2b3664af4e631730c6769a3c8883",
+  "prompts": {},
+  "sessions": {
+    "s_91791dc51fd9c9": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "805cf6e2-2a93-4a0f-b7b4-37ab249bb582",
+        "model": "grok-4.7"
+      },
+      "human_author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    }
+  }
+}
